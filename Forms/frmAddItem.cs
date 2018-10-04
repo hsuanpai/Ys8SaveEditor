@@ -17,15 +17,6 @@ namespace Save_Editor
     {
         #region Fields
         private Ys8Data m_data;
-        private Ys8ItemType[] m_weaponTypes = new Ys8ItemType[]
-            {
-                Ys8ItemType.EQ_WP_ANCHOR,
-                Ys8ItemType.EQ_WP_HALBERT,
-                Ys8ItemType.EQ_WP_MACE,
-                Ys8ItemType.EQ_WP_RAPIER,
-                Ys8ItemType.EQ_WP_SPEAR,
-                Ys8ItemType.EQ_WP_SWORD
-            };
         #endregion
 
         #region Properties
@@ -36,11 +27,10 @@ namespace Save_Editor
         }
         #endregion
 
-
+        #region Constructors/Destructors
         public frmAddItem(Ys8Data data)
         {
             m_data = data;
-            AddedItem = null;
 
             InitializeComponent();
 
@@ -50,6 +40,7 @@ namespace Save_Editor
 
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Red500, Primary.Red700, Primary.Red100, Accent.Indigo200, TextShade.WHITE);
         }
+        #endregion
 
         #region Helper Methods
         private void ClearLabels()
@@ -65,7 +56,7 @@ namespace Save_Editor
         private void SetLabels (Ys8Item item)
         {
             lblItemName.Text = item.Name;
-            lblItemId.Text = item.ID.ToString() + string.Format(" (0x{0:X8}h)", item.ID);
+            lblItemId.Text = $"{item.ID} (0x{item.ID:X8}h)";
             lblItemType.Text = Enum.GetName(typeof(Ys8ItemType), item.Type);
             lblItemRank.Text = item.Rank.ToString();
             lblItemEffect.Text = item.EffectDescription;
@@ -75,7 +66,7 @@ namespace Save_Editor
         {
             foreach (Ys8ItemType itemType in Enum.GetValues(typeof(Ys8ItemType)))
             {
-                if (m_weaponTypes.Contains(itemType))
+                if (Ys8Item.WeaponTypes.Contains(itemType))
                     continue;
 
                 TreeNode parentNode = new TreeNode(Enum.GetName(typeof(Ys8ItemType), itemType));
@@ -96,8 +87,10 @@ namespace Save_Editor
         }
         #endregion
 
+        #region Control Methods
         private void frmAddItem_Load(object sender, EventArgs e)
         {
+            ClearLabels();
             FillItemTree();
         }
 
@@ -128,5 +121,6 @@ namespace Save_Editor
                 ClearLabels();
             }
         }
+        #endregion
     }
 }

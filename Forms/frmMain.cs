@@ -41,6 +41,7 @@ namespace Save_Editor
         }
         #endregion
 
+        #region Constructors/Destructors
         public frmMain()
         {
             InitializeComponent();
@@ -51,6 +52,7 @@ namespace Save_Editor
 
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Red500, Primary.Red700, Primary.Red100, Accent.Indigo200, TextShade.WHITE);
         }
+        #endregion
 
         #region Helper Methods
         private void ClearCharacterDataBindings()
@@ -561,6 +563,7 @@ namespace Save_Editor
         }
         #endregion
 
+        #region Control Methods
         private void frmMain_Load(object sender, EventArgs e)
         {
             ClearLabels();
@@ -597,9 +600,7 @@ namespace Save_Editor
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-
+        }        
 
         private void removeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -735,5 +736,6 @@ namespace Save_Editor
                 }
             }
         }
+        #endregion
     }
 }

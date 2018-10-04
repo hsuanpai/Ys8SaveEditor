@@ -21,6 +21,7 @@ namespace Save_Editor
         private frmMain m_parent;
         #endregion
 
+        #region Constructors/Destructors
         public frmLoadSave(frmMain parent)
         {
             m_parent = parent;
@@ -32,6 +33,7 @@ namespace Save_Editor
 
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Red500, Primary.Red700, Primary.Red100, Accent.Indigo200, TextShade.WHITE);
         }
+        #endregion
 
         #region Helper Methods
         private void LoadHistory()
@@ -59,6 +61,7 @@ namespace Save_Editor
         }
         #endregion
 
+        #region Control Methods
         private void frmLoadSave_Load(object sender, EventArgs e)
         {
             LoadHistory();
@@ -88,11 +91,6 @@ namespace Save_Editor
             }
         }
 
-        private void removeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            lstSaves.Items.RemoveAt(lstSaves.SelectedItems[0].Index);
-        }
-
         private void lstSaves_DoubleClick(object sender, EventArgs e)
         {
             if (lstSaves.SelectedItems != null)
@@ -114,5 +112,6 @@ namespace Save_Editor
                 }
             }
         }
+        #endregion
     }
 }
