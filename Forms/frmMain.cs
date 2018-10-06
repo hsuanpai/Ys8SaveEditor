@@ -22,7 +22,6 @@ namespace Save_Editor
         static readonly object m_lock = new object();
         private Ys8Data m_database;
         private Ys8Save m_save;
-
         #endregion
 
         #region Properties
@@ -192,12 +191,12 @@ namespace Save_Editor
         }
         private void FillTreeView(Ys8Inventory inventory, TreeView treeViewObject)
         {
+            TreeNode parentNode;
+            TreeNode childNode;
+
             treeViewObject.Nodes.Clear();
             foreach (Ys8ItemType itemType in Enum.GetValues(typeof(Ys8ItemType)))
             {
-                TreeNode parentNode;
-                TreeNode childNode;
-
                 string key = GetNodeKey(itemType);
                 if (!treeViewObject.Nodes.ContainsKey(key))
                 {
@@ -219,6 +218,21 @@ namespace Save_Editor
                     parentNode.Nodes.Add(childNode);
                 }
             }
+
+#if DEBUG
+            parentNode = treeViewObject.Nodes.Add("DEBUG_UNKNOWN");
+
+            foreach(KeyValuePair<int, int> saveItem in inventory.Unknown)
+            {
+                Ys8Item tempItem = m_database.Ys8Items.Find(item => item.ID == saveItem.Key);
+                childNode = new TreeNode(tempItem.Name)
+                {
+                    Tag = tempItem,
+                    Name = tempItem.Name
+                };
+                parentNode.Nodes.Add(childNode);
+            }
+#endif
         }
         private bool AddInventoryItem(Ys8SaveItem item, bool isPreviousInventory)
         {
@@ -297,7 +311,8 @@ namespace Save_Editor
             lblItemEffect.Text = parentItem.EffectDescription;
             lblItemDescription.Text = parentItem.Description;
 
-            if (Ys8Item.WeaponTypes.Contains(parentItem.Type) || Ys8Item.EquipmentTypes.Contains(parentItem.Type) || parentItem.Type == Ys8ItemType.DLC)
+            if (Ys8Item.WeaponTypes.Contains(parentItem.Type) || parentItem.Type == Ys8ItemType.DLC)
+            //if (Ys8Item.WeaponTypes.Contains(parentItem.Type) || Ys8Item.EquipmentTypes.Contains(parentItem.Type) || parentItem.Type == Ys8ItemType.DLC)
             {
                 lblItemCount.Visible = false;
                 nudItemCount.Visible = false;
@@ -532,9 +547,9 @@ namespace Save_Editor
                 cmbDanaAccessory2Eq.DataBindings.Add("SelectedItem", character, "Accessory2", false, DataSourceUpdateMode.OnPropertyChanged);
             }
         }
-        #endregion
+#endregion
 
-        #region Methods
+#region Methods
         public Ys8Save LoadSave(string path)
         {
             Ys8Save tempSave = new Ys8Save(m_database, path);
@@ -561,9 +576,9 @@ namespace Save_Editor
 
             m_save = save;
         }
-        #endregion
+#endregion
 
-        #region Control Methods
+#region Control Methods
         private void frmMain_Load(object sender, EventArgs e)
         {
             ClearLabels();
@@ -654,7 +669,16 @@ namespace Save_Editor
             {
                 if (selectedNode.Parent != null)
                 {
-                    Ys8SaveItem saveItem = (Ys8SaveItem)selectedNode.Tag;
+                    Ys8SaveItem saveItem;
+
+#if DEBUG
+                    if (selectedNode.Tag is Ys8Item)
+                        saveItem = new Ys8SaveItem((Ys8Item)selectedNode.Tag);
+                    else
+                        saveItem = (Ys8SaveItem)selectedNode.Tag;
+#else
+                    saveItem = (Ys8SaveItem)selectedNode.Tag;
+#endif
                     SetItemValues(saveItem, (string)trvObject.Tag == "previous");
                 }
             }
@@ -736,6 +760,6 @@ namespace Save_Editor
                 }
             }
         }
-        #endregion
+#endregion
     }
 }

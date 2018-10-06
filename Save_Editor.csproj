@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ys8Skill.cs" />
     <Compile Include="Ys8Cheats.cs" />
     <Compile Include="Forms\frmAddItem.cs">
       <SubType>Form</SubType>

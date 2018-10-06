@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.trvCurrentInventory = new System.Windows.Forms.TreeView();
             this.cmsCurrentItems = new MaterialSkin.Controls.MaterialContextMenuStrip();
             this.mnuiCurrAddItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,43 +40,9 @@
             this.btnSave = new MaterialSkin.Controls.MaterialRaisedButton();
             this.tabInventory = new System.Windows.Forms.TabPage();
             this.materialTabSelector4 = new MaterialSkin.Controls.MaterialTabSelector();
-            this.tabInventoryContainer = new MaterialSkin.Controls.MaterialTabControl();
-            this.tabCurrentInventory = new System.Windows.Forms.TabPage();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.lblCurrentItemRank = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
-            this.nudCurrentItemCount = new System.Windows.Forms.NumericUpDown();
-            this.lblCurrentItemCount = new MaterialSkin.Controls.MaterialLabel();
-            this.lblCurrentItemName = new MaterialSkin.Controls.MaterialLabel();
-            this.lblCurrentItemId = new MaterialSkin.Controls.MaterialLabel();
-            this.lblCurrentItemType = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.lblCurrentItemDescription = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.lblCurrentItemEffect = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.tabPreviousInventory = new System.Windows.Forms.TabPage();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.trvPreviousInventory = new System.Windows.Forms.TreeView();
             this.cmsPreviousItems = new MaterialSkin.Controls.MaterialContextMenuStrip();
             this.mnuiPrevAddItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblPrevItemRank = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel33 = new MaterialSkin.Controls.MaterialLabel();
-            this.nudPrevItemCount = new System.Windows.Forms.NumericUpDown();
-            this.lblPrevItemCount = new MaterialSkin.Controls.MaterialLabel();
-            this.lblPrevItemName = new MaterialSkin.Controls.MaterialLabel();
-            this.lblPrevItemId = new MaterialSkin.Controls.MaterialLabel();
-            this.lblPrevItemType = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel38 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel39 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel40 = new MaterialSkin.Controls.MaterialLabel();
-            this.lblPrevItemDescription = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel42 = new MaterialSkin.Controls.MaterialLabel();
-            this.lblPrevItemEffect = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel44 = new MaterialSkin.Controls.MaterialLabel();
             this.tabCharacter = new System.Windows.Forms.TabPage();
             this.materialTabSelector2 = new MaterialSkin.Controls.MaterialTabSelector();
             this.tabCharacterContainer = new MaterialSkin.Controls.MaterialTabControl();
@@ -212,24 +177,46 @@
             this.materialLabel60 = new MaterialSkin.Controls.MaterialLabel();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.tipEquippedItem = new System.Windows.Forms.ToolTip(this.components);
+            this.tabPreviousInventory = new System.Windows.Forms.TabPage();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.materialLabel44 = new MaterialSkin.Controls.MaterialLabel();
+            this.lblPrevItemEffect = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel42 = new MaterialSkin.Controls.MaterialLabel();
+            this.lblPrevItemDescription = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel40 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel39 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel38 = new MaterialSkin.Controls.MaterialLabel();
+            this.lblPrevItemType = new MaterialSkin.Controls.MaterialLabel();
+            this.lblPrevItemId = new MaterialSkin.Controls.MaterialLabel();
+            this.lblPrevItemName = new MaterialSkin.Controls.MaterialLabel();
+            this.lblPrevItemCount = new MaterialSkin.Controls.MaterialLabel();
+            this.nudPrevItemCount = new System.Windows.Forms.NumericUpDown();
+            this.materialLabel33 = new MaterialSkin.Controls.MaterialLabel();
+            this.lblPrevItemRank = new MaterialSkin.Controls.MaterialLabel();
+            this.trvPreviousInventory = new System.Windows.Forms.TreeView();
+            this.tabCurrentInventory = new System.Windows.Forms.TabPage();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.lblCurrentItemEffect = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.lblCurrentItemDescription = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
+            this.lblCurrentItemType = new MaterialSkin.Controls.MaterialLabel();
+            this.lblCurrentItemId = new MaterialSkin.Controls.MaterialLabel();
+            this.lblCurrentItemName = new MaterialSkin.Controls.MaterialLabel();
+            this.lblCurrentItemCount = new MaterialSkin.Controls.MaterialLabel();
+            this.nudCurrentItemCount = new System.Windows.Forms.NumericUpDown();
+            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
+            this.lblCurrentItemRank = new MaterialSkin.Controls.MaterialLabel();
+            this.trvCurrentInventory = new System.Windows.Forms.TreeView();
+            this.tabInventoryContainer = new MaterialSkin.Controls.MaterialTabControl();
             this.cmsCurrentItems.SuspendLayout();
             this.tabMainContainer.SuspendLayout();
             this.tabFile.SuspendLayout();
             this.tabInventory.SuspendLayout();
-            this.tabInventoryContainer.SuspendLayout();
-            this.tabCurrentInventory.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCurrentItemCount)).BeginInit();
-            this.tabPreviousInventory.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
             this.cmsPreviousItems.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudPrevItemCount)).BeginInit();
             this.tabCharacter.SuspendLayout();
             this.tabCharacterContainer.SuspendLayout();
             this.tabAdol.SuspendLayout();
@@ -269,19 +256,20 @@
             this.tabPage10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDana)).BeginInit();
             this.tabCheats.SuspendLayout();
+            this.tabPreviousInventory.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrevItemCount)).BeginInit();
+            this.tabCurrentInventory.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCurrentItemCount)).BeginInit();
+            this.tabInventoryContainer.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // trvCurrentInventory
-            // 
-            this.trvCurrentInventory.ContextMenuStrip = this.cmsCurrentItems;
-            this.trvCurrentInventory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.trvCurrentInventory.Location = new System.Drawing.Point(0, 0);
-            this.trvCurrentInventory.Name = "trvCurrentInventory";
-            this.trvCurrentInventory.Size = new System.Drawing.Size(200, 367);
-            this.trvCurrentInventory.TabIndex = 0;
-            this.trvCurrentInventory.Tag = "current";
-            this.trvCurrentInventory.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.trvObjectInventory_NodeMouseClick);
-            this.trvCurrentInventory.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.TreeViewObject_NodeMouseDoubleClick);
             // 
             // cmsCurrentItems
             // 
@@ -413,310 +401,6 @@
             this.materialTabSelector4.TabIndex = 3;
             this.materialTabSelector4.Text = "materialTabSelector4";
             // 
-            // tabInventoryContainer
-            // 
-            this.tabInventoryContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabInventoryContainer.ContextMenuStrip = this.cmsCurrentItems;
-            this.tabInventoryContainer.Controls.Add(this.tabCurrentInventory);
-            this.tabInventoryContainer.Controls.Add(this.tabPreviousInventory);
-            this.tabInventoryContainer.Depth = 0;
-            this.tabInventoryContainer.Location = new System.Drawing.Point(0, 29);
-            this.tabInventoryContainer.MouseState = MaterialSkin.MouseState.HOVER;
-            this.tabInventoryContainer.Name = "tabInventoryContainer";
-            this.tabInventoryContainer.SelectedIndex = 0;
-            this.tabInventoryContainer.Size = new System.Drawing.Size(622, 399);
-            this.tabInventoryContainer.TabIndex = 1;
-            // 
-            // tabCurrentInventory
-            // 
-            this.tabCurrentInventory.Controls.Add(this.splitContainer1);
-            this.tabCurrentInventory.Location = new System.Drawing.Point(4, 22);
-            this.tabCurrentInventory.Name = "tabCurrentInventory";
-            this.tabCurrentInventory.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCurrentInventory.Size = new System.Drawing.Size(614, 373);
-            this.tabCurrentInventory.TabIndex = 0;
-            this.tabCurrentInventory.Text = "Current";
-            this.tabCurrentInventory.UseVisualStyleBackColor = true;
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(3, 3);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.trvCurrentInventory);
-            this.splitContainer1.Panel1MinSize = 200;
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.lblCurrentItemRank);
-            this.splitContainer1.Panel2.Controls.Add(this.materialLabel6);
-            this.splitContainer1.Panel2.Controls.Add(this.nudCurrentItemCount);
-            this.splitContainer1.Panel2.Controls.Add(this.lblCurrentItemCount);
-            this.splitContainer1.Panel2.Controls.Add(this.lblCurrentItemName);
-            this.splitContainer1.Panel2.Controls.Add(this.lblCurrentItemId);
-            this.splitContainer1.Panel2.Controls.Add(this.lblCurrentItemType);
-            this.splitContainer1.Panel2.Controls.Add(this.materialLabel5);
-            this.splitContainer1.Panel2.Controls.Add(this.materialLabel4);
-            this.splitContainer1.Panel2.Controls.Add(this.materialLabel3);
-            this.splitContainer1.Panel2.Controls.Add(this.lblCurrentItemDescription);
-            this.splitContainer1.Panel2.Controls.Add(this.materialLabel2);
-            this.splitContainer1.Panel2.Controls.Add(this.lblCurrentItemEffect);
-            this.splitContainer1.Panel2.Controls.Add(this.materialLabel1);
-            this.splitContainer1.Size = new System.Drawing.Size(608, 367);
-            this.splitContainer1.SplitterDistance = 200;
-            this.splitContainer1.TabIndex = 2;
-            // 
-            // lblCurrentItemRank
-            // 
-            this.lblCurrentItemRank.AutoSize = true;
-            this.lblCurrentItemRank.Depth = 0;
-            this.lblCurrentItemRank.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblCurrentItemRank.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblCurrentItemRank.Location = new System.Drawing.Point(102, 73);
-            this.lblCurrentItemRank.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblCurrentItemRank.Name = "lblCurrentItemRank";
-            this.lblCurrentItemRank.Size = new System.Drawing.Size(63, 19);
-            this.lblCurrentItemRank.TabIndex = 14;
-            this.lblCurrentItemRank.Tag = "current";
-            this.lblCurrentItemRank.Text = "<Temp>";
-            // 
-            // materialLabel6
-            // 
-            this.materialLabel6.AutoSize = true;
-            this.materialLabel6.Depth = 0;
-            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel6.Location = new System.Drawing.Point(8, 73);
-            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel6.Name = "materialLabel6";
-            this.materialLabel6.Size = new System.Drawing.Size(42, 19);
-            this.materialLabel6.TabIndex = 13;
-            this.materialLabel6.Text = "Rank";
-            // 
-            // nudCurrentItemCount
-            // 
-            this.nudCurrentItemCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudCurrentItemCount.Location = new System.Drawing.Point(12, 149);
-            this.nudCurrentItemCount.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.nudCurrentItemCount.Name = "nudCurrentItemCount";
-            this.nudCurrentItemCount.Size = new System.Drawing.Size(393, 20);
-            this.nudCurrentItemCount.TabIndex = 12;
-            this.nudCurrentItemCount.Tag = "current";
-            this.nudCurrentItemCount.Visible = false;
-            // 
-            // lblCurrentItemCount
-            // 
-            this.lblCurrentItemCount.AutoSize = true;
-            this.lblCurrentItemCount.Depth = 0;
-            this.lblCurrentItemCount.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblCurrentItemCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblCurrentItemCount.Location = new System.Drawing.Point(9, 128);
-            this.lblCurrentItemCount.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblCurrentItemCount.Name = "lblCurrentItemCount";
-            this.lblCurrentItemCount.Size = new System.Drawing.Size(49, 19);
-            this.lblCurrentItemCount.TabIndex = 11;
-            this.lblCurrentItemCount.Text = "Count";
-            this.lblCurrentItemCount.Visible = false;
-            // 
-            // lblCurrentItemName
-            // 
-            this.lblCurrentItemName.AutoSize = true;
-            this.lblCurrentItemName.Depth = 0;
-            this.lblCurrentItemName.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblCurrentItemName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblCurrentItemName.Location = new System.Drawing.Point(103, 17);
-            this.lblCurrentItemName.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblCurrentItemName.Name = "lblCurrentItemName";
-            this.lblCurrentItemName.Size = new System.Drawing.Size(63, 19);
-            this.lblCurrentItemName.TabIndex = 10;
-            this.lblCurrentItemName.Tag = "curr_item_name";
-            this.lblCurrentItemName.Text = "<Temp>";
-            // 
-            // lblCurrentItemId
-            // 
-            this.lblCurrentItemId.AutoSize = true;
-            this.lblCurrentItemId.Depth = 0;
-            this.lblCurrentItemId.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblCurrentItemId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblCurrentItemId.Location = new System.Drawing.Point(103, 36);
-            this.lblCurrentItemId.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblCurrentItemId.Name = "lblCurrentItemId";
-            this.lblCurrentItemId.Size = new System.Drawing.Size(63, 19);
-            this.lblCurrentItemId.TabIndex = 9;
-            this.lblCurrentItemId.Tag = "curr_item_id";
-            this.lblCurrentItemId.Text = "<Temp>";
-            // 
-            // lblCurrentItemType
-            // 
-            this.lblCurrentItemType.AutoSize = true;
-            this.lblCurrentItemType.Depth = 0;
-            this.lblCurrentItemType.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblCurrentItemType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblCurrentItemType.Location = new System.Drawing.Point(103, 55);
-            this.lblCurrentItemType.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblCurrentItemType.Name = "lblCurrentItemType";
-            this.lblCurrentItemType.Size = new System.Drawing.Size(63, 19);
-            this.lblCurrentItemType.TabIndex = 8;
-            this.lblCurrentItemType.Tag = "curr_item_type";
-            this.lblCurrentItemType.Text = "<Temp>";
-            // 
-            // materialLabel5
-            // 
-            this.materialLabel5.AutoSize = true;
-            this.materialLabel5.Depth = 0;
-            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel5.Location = new System.Drawing.Point(9, 36);
-            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(23, 19);
-            this.materialLabel5.TabIndex = 7;
-            this.materialLabel5.Text = "ID";
-            // 
-            // materialLabel4
-            // 
-            this.materialLabel4.AutoSize = true;
-            this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel4.Location = new System.Drawing.Point(9, 55);
-            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(41, 19);
-            this.materialLabel4.TabIndex = 6;
-            this.materialLabel4.Text = "Type";
-            // 
-            // materialLabel3
-            // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(9, 17);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(49, 19);
-            this.materialLabel3.TabIndex = 5;
-            this.materialLabel3.Text = "Name";
-            // 
-            // lblCurrentItemDescription
-            // 
-            this.lblCurrentItemDescription.AutoSize = true;
-            this.lblCurrentItemDescription.Depth = 0;
-            this.lblCurrentItemDescription.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblCurrentItemDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblCurrentItemDescription.Location = new System.Drawing.Point(103, 110);
-            this.lblCurrentItemDescription.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblCurrentItemDescription.Name = "lblCurrentItemDescription";
-            this.lblCurrentItemDescription.Size = new System.Drawing.Size(63, 19);
-            this.lblCurrentItemDescription.TabIndex = 4;
-            this.lblCurrentItemDescription.Tag = "current";
-            this.lblCurrentItemDescription.Text = "<Temp>";
-            // 
-            // materialLabel2
-            // 
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(9, 110);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(86, 19);
-            this.materialLabel2.TabIndex = 3;
-            this.materialLabel2.Text = "Description";
-            // 
-            // lblCurrentItemEffect
-            // 
-            this.lblCurrentItemEffect.AutoSize = true;
-            this.lblCurrentItemEffect.Depth = 0;
-            this.lblCurrentItemEffect.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblCurrentItemEffect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblCurrentItemEffect.Location = new System.Drawing.Point(103, 92);
-            this.lblCurrentItemEffect.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblCurrentItemEffect.Name = "lblCurrentItemEffect";
-            this.lblCurrentItemEffect.Size = new System.Drawing.Size(63, 19);
-            this.lblCurrentItemEffect.TabIndex = 2;
-            this.lblCurrentItemEffect.Tag = "current";
-            this.lblCurrentItemEffect.Text = "<Temp>";
-            // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(9, 92);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(49, 19);
-            this.materialLabel1.TabIndex = 1;
-            this.materialLabel1.Text = "Effect";
-            // 
-            // tabPreviousInventory
-            // 
-            this.tabPreviousInventory.Controls.Add(this.splitContainer2);
-            this.tabPreviousInventory.Location = new System.Drawing.Point(4, 22);
-            this.tabPreviousInventory.Name = "tabPreviousInventory";
-            this.tabPreviousInventory.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPreviousInventory.Size = new System.Drawing.Size(614, 373);
-            this.tabPreviousInventory.TabIndex = 1;
-            this.tabPreviousInventory.Text = "Previous";
-            this.tabPreviousInventory.UseVisualStyleBackColor = true;
-            // 
-            // splitContainer2
-            // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(3, 3);
-            this.splitContainer2.Name = "splitContainer2";
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this.trvPreviousInventory);
-            this.splitContainer2.Panel1MinSize = 200;
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.lblPrevItemRank);
-            this.splitContainer2.Panel2.Controls.Add(this.materialLabel33);
-            this.splitContainer2.Panel2.Controls.Add(this.nudPrevItemCount);
-            this.splitContainer2.Panel2.Controls.Add(this.lblPrevItemCount);
-            this.splitContainer2.Panel2.Controls.Add(this.lblPrevItemName);
-            this.splitContainer2.Panel2.Controls.Add(this.lblPrevItemId);
-            this.splitContainer2.Panel2.Controls.Add(this.lblPrevItemType);
-            this.splitContainer2.Panel2.Controls.Add(this.materialLabel38);
-            this.splitContainer2.Panel2.Controls.Add(this.materialLabel39);
-            this.splitContainer2.Panel2.Controls.Add(this.materialLabel40);
-            this.splitContainer2.Panel2.Controls.Add(this.lblPrevItemDescription);
-            this.splitContainer2.Panel2.Controls.Add(this.materialLabel42);
-            this.splitContainer2.Panel2.Controls.Add(this.lblPrevItemEffect);
-            this.splitContainer2.Panel2.Controls.Add(this.materialLabel44);
-            this.splitContainer2.Size = new System.Drawing.Size(608, 367);
-            this.splitContainer2.SplitterDistance = 200;
-            this.splitContainer2.TabIndex = 3;
-            // 
-            // trvPreviousInventory
-            // 
-            this.trvPreviousInventory.ContextMenuStrip = this.cmsPreviousItems;
-            this.trvPreviousInventory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.trvPreviousInventory.Location = new System.Drawing.Point(0, 0);
-            this.trvPreviousInventory.Name = "trvPreviousInventory";
-            this.trvPreviousInventory.Size = new System.Drawing.Size(200, 367);
-            this.trvPreviousInventory.TabIndex = 0;
-            this.trvPreviousInventory.Tag = "previous";
-            this.trvPreviousInventory.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.trvObjectInventory_NodeMouseClick);
-            this.trvPreviousInventory.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.TreeViewObject_NodeMouseDoubleClick);
-            // 
             // cmsPreviousItems
             // 
             this.cmsPreviousItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -742,198 +426,6 @@
             this.toolStripMenuItem2.Size = new System.Drawing.Size(144, 22);
             this.toolStripMenuItem2.Text = "Remove Item";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
-            // 
-            // lblPrevItemRank
-            // 
-            this.lblPrevItemRank.AutoSize = true;
-            this.lblPrevItemRank.Depth = 0;
-            this.lblPrevItemRank.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblPrevItemRank.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPrevItemRank.Location = new System.Drawing.Point(102, 73);
-            this.lblPrevItemRank.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblPrevItemRank.Name = "lblPrevItemRank";
-            this.lblPrevItemRank.Size = new System.Drawing.Size(63, 19);
-            this.lblPrevItemRank.TabIndex = 14;
-            this.lblPrevItemRank.Tag = "previous";
-            this.lblPrevItemRank.Text = "<Temp>";
-            // 
-            // materialLabel33
-            // 
-            this.materialLabel33.AutoSize = true;
-            this.materialLabel33.Depth = 0;
-            this.materialLabel33.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel33.Location = new System.Drawing.Point(8, 73);
-            this.materialLabel33.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel33.Name = "materialLabel33";
-            this.materialLabel33.Size = new System.Drawing.Size(42, 19);
-            this.materialLabel33.TabIndex = 13;
-            this.materialLabel33.Text = "Rank";
-            // 
-            // nudPrevItemCount
-            // 
-            this.nudPrevItemCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudPrevItemCount.Location = new System.Drawing.Point(12, 149);
-            this.nudPrevItemCount.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.nudPrevItemCount.Name = "nudPrevItemCount";
-            this.nudPrevItemCount.Size = new System.Drawing.Size(393, 20);
-            this.nudPrevItemCount.TabIndex = 12;
-            this.nudPrevItemCount.Tag = "previous";
-            this.nudPrevItemCount.Visible = false;
-            // 
-            // lblPrevItemCount
-            // 
-            this.lblPrevItemCount.AutoSize = true;
-            this.lblPrevItemCount.Depth = 0;
-            this.lblPrevItemCount.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblPrevItemCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPrevItemCount.Location = new System.Drawing.Point(9, 128);
-            this.lblPrevItemCount.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblPrevItemCount.Name = "lblPrevItemCount";
-            this.lblPrevItemCount.Size = new System.Drawing.Size(49, 19);
-            this.lblPrevItemCount.TabIndex = 11;
-            this.lblPrevItemCount.Text = "Count";
-            this.lblPrevItemCount.Visible = false;
-            // 
-            // lblPrevItemName
-            // 
-            this.lblPrevItemName.AutoSize = true;
-            this.lblPrevItemName.Depth = 0;
-            this.lblPrevItemName.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblPrevItemName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPrevItemName.Location = new System.Drawing.Point(103, 17);
-            this.lblPrevItemName.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblPrevItemName.Name = "lblPrevItemName";
-            this.lblPrevItemName.Size = new System.Drawing.Size(63, 19);
-            this.lblPrevItemName.TabIndex = 10;
-            this.lblPrevItemName.Tag = "previous";
-            this.lblPrevItemName.Text = "<Temp>";
-            // 
-            // lblPrevItemId
-            // 
-            this.lblPrevItemId.AutoSize = true;
-            this.lblPrevItemId.Depth = 0;
-            this.lblPrevItemId.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblPrevItemId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPrevItemId.Location = new System.Drawing.Point(103, 36);
-            this.lblPrevItemId.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblPrevItemId.Name = "lblPrevItemId";
-            this.lblPrevItemId.Size = new System.Drawing.Size(63, 19);
-            this.lblPrevItemId.TabIndex = 9;
-            this.lblPrevItemId.Tag = "previous";
-            this.lblPrevItemId.Text = "<Temp>";
-            // 
-            // lblPrevItemType
-            // 
-            this.lblPrevItemType.AutoSize = true;
-            this.lblPrevItemType.Depth = 0;
-            this.lblPrevItemType.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblPrevItemType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPrevItemType.Location = new System.Drawing.Point(103, 55);
-            this.lblPrevItemType.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblPrevItemType.Name = "lblPrevItemType";
-            this.lblPrevItemType.Size = new System.Drawing.Size(63, 19);
-            this.lblPrevItemType.TabIndex = 8;
-            this.lblPrevItemType.Tag = "previous";
-            this.lblPrevItemType.Text = "<Temp>";
-            // 
-            // materialLabel38
-            // 
-            this.materialLabel38.AutoSize = true;
-            this.materialLabel38.Depth = 0;
-            this.materialLabel38.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel38.Location = new System.Drawing.Point(9, 36);
-            this.materialLabel38.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel38.Name = "materialLabel38";
-            this.materialLabel38.Size = new System.Drawing.Size(23, 19);
-            this.materialLabel38.TabIndex = 7;
-            this.materialLabel38.Text = "ID";
-            // 
-            // materialLabel39
-            // 
-            this.materialLabel39.AutoSize = true;
-            this.materialLabel39.Depth = 0;
-            this.materialLabel39.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel39.Location = new System.Drawing.Point(9, 55);
-            this.materialLabel39.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel39.Name = "materialLabel39";
-            this.materialLabel39.Size = new System.Drawing.Size(41, 19);
-            this.materialLabel39.TabIndex = 6;
-            this.materialLabel39.Text = "Type";
-            // 
-            // materialLabel40
-            // 
-            this.materialLabel40.AutoSize = true;
-            this.materialLabel40.Depth = 0;
-            this.materialLabel40.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel40.Location = new System.Drawing.Point(9, 17);
-            this.materialLabel40.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel40.Name = "materialLabel40";
-            this.materialLabel40.Size = new System.Drawing.Size(49, 19);
-            this.materialLabel40.TabIndex = 5;
-            this.materialLabel40.Text = "Name";
-            // 
-            // lblPrevItemDescription
-            // 
-            this.lblPrevItemDescription.AutoSize = true;
-            this.lblPrevItemDescription.Depth = 0;
-            this.lblPrevItemDescription.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblPrevItemDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPrevItemDescription.Location = new System.Drawing.Point(103, 110);
-            this.lblPrevItemDescription.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblPrevItemDescription.Name = "lblPrevItemDescription";
-            this.lblPrevItemDescription.Size = new System.Drawing.Size(63, 19);
-            this.lblPrevItemDescription.TabIndex = 4;
-            this.lblPrevItemDescription.Tag = "previous";
-            this.lblPrevItemDescription.Text = "<Temp>";
-            // 
-            // materialLabel42
-            // 
-            this.materialLabel42.AutoSize = true;
-            this.materialLabel42.Depth = 0;
-            this.materialLabel42.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel42.Location = new System.Drawing.Point(9, 110);
-            this.materialLabel42.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel42.Name = "materialLabel42";
-            this.materialLabel42.Size = new System.Drawing.Size(86, 19);
-            this.materialLabel42.TabIndex = 3;
-            this.materialLabel42.Text = "Description";
-            // 
-            // lblPrevItemEffect
-            // 
-            this.lblPrevItemEffect.AutoSize = true;
-            this.lblPrevItemEffect.Depth = 0;
-            this.lblPrevItemEffect.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblPrevItemEffect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPrevItemEffect.Location = new System.Drawing.Point(103, 92);
-            this.lblPrevItemEffect.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblPrevItemEffect.Name = "lblPrevItemEffect";
-            this.lblPrevItemEffect.Size = new System.Drawing.Size(63, 19);
-            this.lblPrevItemEffect.TabIndex = 2;
-            this.lblPrevItemEffect.Tag = "previous";
-            this.lblPrevItemEffect.Text = "<Temp>";
-            // 
-            // materialLabel44
-            // 
-            this.materialLabel44.AutoSize = true;
-            this.materialLabel44.Depth = 0;
-            this.materialLabel44.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel44.Location = new System.Drawing.Point(9, 92);
-            this.materialLabel44.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel44.Name = "materialLabel44";
-            this.materialLabel44.Size = new System.Drawing.Size(49, 19);
-            this.materialLabel44.TabIndex = 1;
-            this.materialLabel44.Text = "Effect";
             // 
             // tabCharacter
             // 
@@ -2716,6 +2208,514 @@
             this.materialTabSelector1.TabIndex = 0;
             this.materialTabSelector1.Text = "materialTabSelector1";
             // 
+            // tabPreviousInventory
+            // 
+            this.tabPreviousInventory.Controls.Add(this.splitContainer2);
+            this.tabPreviousInventory.Location = new System.Drawing.Point(4, 22);
+            this.tabPreviousInventory.Name = "tabPreviousInventory";
+            this.tabPreviousInventory.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPreviousInventory.Size = new System.Drawing.Size(614, 373);
+            this.tabPreviousInventory.TabIndex = 1;
+            this.tabPreviousInventory.Text = "Previous";
+            this.tabPreviousInventory.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.trvPreviousInventory);
+            this.splitContainer2.Panel1MinSize = 200;
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.lblPrevItemRank);
+            this.splitContainer2.Panel2.Controls.Add(this.materialLabel33);
+            this.splitContainer2.Panel2.Controls.Add(this.nudPrevItemCount);
+            this.splitContainer2.Panel2.Controls.Add(this.lblPrevItemCount);
+            this.splitContainer2.Panel2.Controls.Add(this.lblPrevItemName);
+            this.splitContainer2.Panel2.Controls.Add(this.lblPrevItemId);
+            this.splitContainer2.Panel2.Controls.Add(this.lblPrevItemType);
+            this.splitContainer2.Panel2.Controls.Add(this.materialLabel38);
+            this.splitContainer2.Panel2.Controls.Add(this.materialLabel39);
+            this.splitContainer2.Panel2.Controls.Add(this.materialLabel40);
+            this.splitContainer2.Panel2.Controls.Add(this.lblPrevItemDescription);
+            this.splitContainer2.Panel2.Controls.Add(this.materialLabel42);
+            this.splitContainer2.Panel2.Controls.Add(this.lblPrevItemEffect);
+            this.splitContainer2.Panel2.Controls.Add(this.materialLabel44);
+            this.splitContainer2.Size = new System.Drawing.Size(608, 367);
+            this.splitContainer2.SplitterDistance = 200;
+            this.splitContainer2.TabIndex = 3;
+            // 
+            // materialLabel44
+            // 
+            this.materialLabel44.AutoSize = true;
+            this.materialLabel44.Depth = 0;
+            this.materialLabel44.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel44.Location = new System.Drawing.Point(9, 92);
+            this.materialLabel44.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel44.Name = "materialLabel44";
+            this.materialLabel44.Size = new System.Drawing.Size(49, 19);
+            this.materialLabel44.TabIndex = 1;
+            this.materialLabel44.Text = "Effect";
+            // 
+            // lblPrevItemEffect
+            // 
+            this.lblPrevItemEffect.AutoSize = true;
+            this.lblPrevItemEffect.Depth = 0;
+            this.lblPrevItemEffect.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblPrevItemEffect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblPrevItemEffect.Location = new System.Drawing.Point(103, 92);
+            this.lblPrevItemEffect.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblPrevItemEffect.Name = "lblPrevItemEffect";
+            this.lblPrevItemEffect.Size = new System.Drawing.Size(63, 19);
+            this.lblPrevItemEffect.TabIndex = 2;
+            this.lblPrevItemEffect.Tag = "previous";
+            this.lblPrevItemEffect.Text = "<Temp>";
+            // 
+            // materialLabel42
+            // 
+            this.materialLabel42.AutoSize = true;
+            this.materialLabel42.Depth = 0;
+            this.materialLabel42.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel42.Location = new System.Drawing.Point(9, 110);
+            this.materialLabel42.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel42.Name = "materialLabel42";
+            this.materialLabel42.Size = new System.Drawing.Size(86, 19);
+            this.materialLabel42.TabIndex = 3;
+            this.materialLabel42.Text = "Description";
+            // 
+            // lblPrevItemDescription
+            // 
+            this.lblPrevItemDescription.AutoSize = true;
+            this.lblPrevItemDescription.Depth = 0;
+            this.lblPrevItemDescription.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblPrevItemDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblPrevItemDescription.Location = new System.Drawing.Point(103, 110);
+            this.lblPrevItemDescription.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblPrevItemDescription.Name = "lblPrevItemDescription";
+            this.lblPrevItemDescription.Size = new System.Drawing.Size(63, 19);
+            this.lblPrevItemDescription.TabIndex = 4;
+            this.lblPrevItemDescription.Tag = "previous";
+            this.lblPrevItemDescription.Text = "<Temp>";
+            // 
+            // materialLabel40
+            // 
+            this.materialLabel40.AutoSize = true;
+            this.materialLabel40.Depth = 0;
+            this.materialLabel40.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel40.Location = new System.Drawing.Point(9, 17);
+            this.materialLabel40.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel40.Name = "materialLabel40";
+            this.materialLabel40.Size = new System.Drawing.Size(49, 19);
+            this.materialLabel40.TabIndex = 5;
+            this.materialLabel40.Text = "Name";
+            // 
+            // materialLabel39
+            // 
+            this.materialLabel39.AutoSize = true;
+            this.materialLabel39.Depth = 0;
+            this.materialLabel39.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel39.Location = new System.Drawing.Point(9, 55);
+            this.materialLabel39.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel39.Name = "materialLabel39";
+            this.materialLabel39.Size = new System.Drawing.Size(41, 19);
+            this.materialLabel39.TabIndex = 6;
+            this.materialLabel39.Text = "Type";
+            // 
+            // materialLabel38
+            // 
+            this.materialLabel38.AutoSize = true;
+            this.materialLabel38.Depth = 0;
+            this.materialLabel38.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel38.Location = new System.Drawing.Point(9, 36);
+            this.materialLabel38.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel38.Name = "materialLabel38";
+            this.materialLabel38.Size = new System.Drawing.Size(23, 19);
+            this.materialLabel38.TabIndex = 7;
+            this.materialLabel38.Text = "ID";
+            // 
+            // lblPrevItemType
+            // 
+            this.lblPrevItemType.AutoSize = true;
+            this.lblPrevItemType.Depth = 0;
+            this.lblPrevItemType.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblPrevItemType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblPrevItemType.Location = new System.Drawing.Point(103, 55);
+            this.lblPrevItemType.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblPrevItemType.Name = "lblPrevItemType";
+            this.lblPrevItemType.Size = new System.Drawing.Size(63, 19);
+            this.lblPrevItemType.TabIndex = 8;
+            this.lblPrevItemType.Tag = "previous";
+            this.lblPrevItemType.Text = "<Temp>";
+            // 
+            // lblPrevItemId
+            // 
+            this.lblPrevItemId.AutoSize = true;
+            this.lblPrevItemId.Depth = 0;
+            this.lblPrevItemId.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblPrevItemId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblPrevItemId.Location = new System.Drawing.Point(103, 36);
+            this.lblPrevItemId.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblPrevItemId.Name = "lblPrevItemId";
+            this.lblPrevItemId.Size = new System.Drawing.Size(63, 19);
+            this.lblPrevItemId.TabIndex = 9;
+            this.lblPrevItemId.Tag = "previous";
+            this.lblPrevItemId.Text = "<Temp>";
+            // 
+            // lblPrevItemName
+            // 
+            this.lblPrevItemName.AutoSize = true;
+            this.lblPrevItemName.Depth = 0;
+            this.lblPrevItemName.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblPrevItemName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblPrevItemName.Location = new System.Drawing.Point(103, 17);
+            this.lblPrevItemName.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblPrevItemName.Name = "lblPrevItemName";
+            this.lblPrevItemName.Size = new System.Drawing.Size(63, 19);
+            this.lblPrevItemName.TabIndex = 10;
+            this.lblPrevItemName.Tag = "previous";
+            this.lblPrevItemName.Text = "<Temp>";
+            // 
+            // lblPrevItemCount
+            // 
+            this.lblPrevItemCount.AutoSize = true;
+            this.lblPrevItemCount.Depth = 0;
+            this.lblPrevItemCount.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblPrevItemCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblPrevItemCount.Location = new System.Drawing.Point(9, 128);
+            this.lblPrevItemCount.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblPrevItemCount.Name = "lblPrevItemCount";
+            this.lblPrevItemCount.Size = new System.Drawing.Size(49, 19);
+            this.lblPrevItemCount.TabIndex = 11;
+            this.lblPrevItemCount.Text = "Count";
+            this.lblPrevItemCount.Visible = false;
+            // 
+            // nudPrevItemCount
+            // 
+            this.nudPrevItemCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudPrevItemCount.Location = new System.Drawing.Point(12, 149);
+            this.nudPrevItemCount.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.nudPrevItemCount.Name = "nudPrevItemCount";
+            this.nudPrevItemCount.Size = new System.Drawing.Size(393, 20);
+            this.nudPrevItemCount.TabIndex = 12;
+            this.nudPrevItemCount.Tag = "previous";
+            this.nudPrevItemCount.Visible = false;
+            // 
+            // materialLabel33
+            // 
+            this.materialLabel33.AutoSize = true;
+            this.materialLabel33.Depth = 0;
+            this.materialLabel33.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel33.Location = new System.Drawing.Point(8, 73);
+            this.materialLabel33.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel33.Name = "materialLabel33";
+            this.materialLabel33.Size = new System.Drawing.Size(42, 19);
+            this.materialLabel33.TabIndex = 13;
+            this.materialLabel33.Text = "Rank";
+            // 
+            // lblPrevItemRank
+            // 
+            this.lblPrevItemRank.AutoSize = true;
+            this.lblPrevItemRank.Depth = 0;
+            this.lblPrevItemRank.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblPrevItemRank.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblPrevItemRank.Location = new System.Drawing.Point(102, 73);
+            this.lblPrevItemRank.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblPrevItemRank.Name = "lblPrevItemRank";
+            this.lblPrevItemRank.Size = new System.Drawing.Size(63, 19);
+            this.lblPrevItemRank.TabIndex = 14;
+            this.lblPrevItemRank.Tag = "previous";
+            this.lblPrevItemRank.Text = "<Temp>";
+            // 
+            // trvPreviousInventory
+            // 
+            this.trvPreviousInventory.ContextMenuStrip = this.cmsPreviousItems;
+            this.trvPreviousInventory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.trvPreviousInventory.Location = new System.Drawing.Point(0, 0);
+            this.trvPreviousInventory.Name = "trvPreviousInventory";
+            this.trvPreviousInventory.Size = new System.Drawing.Size(200, 367);
+            this.trvPreviousInventory.TabIndex = 0;
+            this.trvPreviousInventory.Tag = "previous";
+            this.trvPreviousInventory.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.trvObjectInventory_NodeMouseClick);
+            this.trvPreviousInventory.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.TreeViewObject_NodeMouseDoubleClick);
+            // 
+            // tabCurrentInventory
+            // 
+            this.tabCurrentInventory.Controls.Add(this.splitContainer1);
+            this.tabCurrentInventory.Location = new System.Drawing.Point(4, 22);
+            this.tabCurrentInventory.Name = "tabCurrentInventory";
+            this.tabCurrentInventory.Padding = new System.Windows.Forms.Padding(3);
+            this.tabCurrentInventory.Size = new System.Drawing.Size(614, 373);
+            this.tabCurrentInventory.TabIndex = 0;
+            this.tabCurrentInventory.Text = "Current";
+            this.tabCurrentInventory.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.trvCurrentInventory);
+            this.splitContainer1.Panel1MinSize = 200;
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.lblCurrentItemRank);
+            this.splitContainer1.Panel2.Controls.Add(this.materialLabel6);
+            this.splitContainer1.Panel2.Controls.Add(this.nudCurrentItemCount);
+            this.splitContainer1.Panel2.Controls.Add(this.lblCurrentItemCount);
+            this.splitContainer1.Panel2.Controls.Add(this.lblCurrentItemName);
+            this.splitContainer1.Panel2.Controls.Add(this.lblCurrentItemId);
+            this.splitContainer1.Panel2.Controls.Add(this.lblCurrentItemType);
+            this.splitContainer1.Panel2.Controls.Add(this.materialLabel5);
+            this.splitContainer1.Panel2.Controls.Add(this.materialLabel4);
+            this.splitContainer1.Panel2.Controls.Add(this.materialLabel3);
+            this.splitContainer1.Panel2.Controls.Add(this.lblCurrentItemDescription);
+            this.splitContainer1.Panel2.Controls.Add(this.materialLabel2);
+            this.splitContainer1.Panel2.Controls.Add(this.lblCurrentItemEffect);
+            this.splitContainer1.Panel2.Controls.Add(this.materialLabel1);
+            this.splitContainer1.Size = new System.Drawing.Size(608, 367);
+            this.splitContainer1.SplitterDistance = 200;
+            this.splitContainer1.TabIndex = 2;
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(9, 92);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(49, 19);
+            this.materialLabel1.TabIndex = 1;
+            this.materialLabel1.Text = "Effect";
+            // 
+            // lblCurrentItemEffect
+            // 
+            this.lblCurrentItemEffect.AutoSize = true;
+            this.lblCurrentItemEffect.Depth = 0;
+            this.lblCurrentItemEffect.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblCurrentItemEffect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblCurrentItemEffect.Location = new System.Drawing.Point(103, 92);
+            this.lblCurrentItemEffect.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblCurrentItemEffect.Name = "lblCurrentItemEffect";
+            this.lblCurrentItemEffect.Size = new System.Drawing.Size(63, 19);
+            this.lblCurrentItemEffect.TabIndex = 2;
+            this.lblCurrentItemEffect.Tag = "current";
+            this.lblCurrentItemEffect.Text = "<Temp>";
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel2.Location = new System.Drawing.Point(9, 110);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(86, 19);
+            this.materialLabel2.TabIndex = 3;
+            this.materialLabel2.Text = "Description";
+            // 
+            // lblCurrentItemDescription
+            // 
+            this.lblCurrentItemDescription.AutoSize = true;
+            this.lblCurrentItemDescription.Depth = 0;
+            this.lblCurrentItemDescription.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblCurrentItemDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblCurrentItemDescription.Location = new System.Drawing.Point(103, 110);
+            this.lblCurrentItemDescription.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblCurrentItemDescription.Name = "lblCurrentItemDescription";
+            this.lblCurrentItemDescription.Size = new System.Drawing.Size(63, 19);
+            this.lblCurrentItemDescription.TabIndex = 4;
+            this.lblCurrentItemDescription.Tag = "current";
+            this.lblCurrentItemDescription.Text = "<Temp>";
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel3.Location = new System.Drawing.Point(9, 17);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(49, 19);
+            this.materialLabel3.TabIndex = 5;
+            this.materialLabel3.Text = "Name";
+            // 
+            // materialLabel4
+            // 
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel4.Location = new System.Drawing.Point(9, 55);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(41, 19);
+            this.materialLabel4.TabIndex = 6;
+            this.materialLabel4.Text = "Type";
+            // 
+            // materialLabel5
+            // 
+            this.materialLabel5.AutoSize = true;
+            this.materialLabel5.Depth = 0;
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel5.Location = new System.Drawing.Point(9, 36);
+            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(23, 19);
+            this.materialLabel5.TabIndex = 7;
+            this.materialLabel5.Text = "ID";
+            // 
+            // lblCurrentItemType
+            // 
+            this.lblCurrentItemType.AutoSize = true;
+            this.lblCurrentItemType.Depth = 0;
+            this.lblCurrentItemType.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblCurrentItemType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblCurrentItemType.Location = new System.Drawing.Point(103, 55);
+            this.lblCurrentItemType.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblCurrentItemType.Name = "lblCurrentItemType";
+            this.lblCurrentItemType.Size = new System.Drawing.Size(63, 19);
+            this.lblCurrentItemType.TabIndex = 8;
+            this.lblCurrentItemType.Tag = "curr_item_type";
+            this.lblCurrentItemType.Text = "<Temp>";
+            // 
+            // lblCurrentItemId
+            // 
+            this.lblCurrentItemId.AutoSize = true;
+            this.lblCurrentItemId.Depth = 0;
+            this.lblCurrentItemId.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblCurrentItemId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblCurrentItemId.Location = new System.Drawing.Point(103, 36);
+            this.lblCurrentItemId.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblCurrentItemId.Name = "lblCurrentItemId";
+            this.lblCurrentItemId.Size = new System.Drawing.Size(63, 19);
+            this.lblCurrentItemId.TabIndex = 9;
+            this.lblCurrentItemId.Tag = "curr_item_id";
+            this.lblCurrentItemId.Text = "<Temp>";
+            // 
+            // lblCurrentItemName
+            // 
+            this.lblCurrentItemName.AutoSize = true;
+            this.lblCurrentItemName.Depth = 0;
+            this.lblCurrentItemName.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblCurrentItemName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblCurrentItemName.Location = new System.Drawing.Point(103, 17);
+            this.lblCurrentItemName.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblCurrentItemName.Name = "lblCurrentItemName";
+            this.lblCurrentItemName.Size = new System.Drawing.Size(63, 19);
+            this.lblCurrentItemName.TabIndex = 10;
+            this.lblCurrentItemName.Tag = "curr_item_name";
+            this.lblCurrentItemName.Text = "<Temp>";
+            // 
+            // lblCurrentItemCount
+            // 
+            this.lblCurrentItemCount.AutoSize = true;
+            this.lblCurrentItemCount.Depth = 0;
+            this.lblCurrentItemCount.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblCurrentItemCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblCurrentItemCount.Location = new System.Drawing.Point(9, 128);
+            this.lblCurrentItemCount.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblCurrentItemCount.Name = "lblCurrentItemCount";
+            this.lblCurrentItemCount.Size = new System.Drawing.Size(49, 19);
+            this.lblCurrentItemCount.TabIndex = 11;
+            this.lblCurrentItemCount.Text = "Count";
+            this.lblCurrentItemCount.Visible = false;
+            // 
+            // nudCurrentItemCount
+            // 
+            this.nudCurrentItemCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudCurrentItemCount.Location = new System.Drawing.Point(12, 149);
+            this.nudCurrentItemCount.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.nudCurrentItemCount.Name = "nudCurrentItemCount";
+            this.nudCurrentItemCount.Size = new System.Drawing.Size(393, 20);
+            this.nudCurrentItemCount.TabIndex = 12;
+            this.nudCurrentItemCount.Tag = "current";
+            this.nudCurrentItemCount.Visible = false;
+            // 
+            // materialLabel6
+            // 
+            this.materialLabel6.AutoSize = true;
+            this.materialLabel6.Depth = 0;
+            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel6.Location = new System.Drawing.Point(8, 73);
+            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel6.Name = "materialLabel6";
+            this.materialLabel6.Size = new System.Drawing.Size(42, 19);
+            this.materialLabel6.TabIndex = 13;
+            this.materialLabel6.Text = "Rank";
+            // 
+            // lblCurrentItemRank
+            // 
+            this.lblCurrentItemRank.AutoSize = true;
+            this.lblCurrentItemRank.Depth = 0;
+            this.lblCurrentItemRank.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblCurrentItemRank.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblCurrentItemRank.Location = new System.Drawing.Point(102, 73);
+            this.lblCurrentItemRank.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblCurrentItemRank.Name = "lblCurrentItemRank";
+            this.lblCurrentItemRank.Size = new System.Drawing.Size(63, 19);
+            this.lblCurrentItemRank.TabIndex = 14;
+            this.lblCurrentItemRank.Tag = "current";
+            this.lblCurrentItemRank.Text = "<Temp>";
+            // 
+            // trvCurrentInventory
+            // 
+            this.trvCurrentInventory.ContextMenuStrip = this.cmsCurrentItems;
+            this.trvCurrentInventory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.trvCurrentInventory.Location = new System.Drawing.Point(0, 0);
+            this.trvCurrentInventory.Name = "trvCurrentInventory";
+            this.trvCurrentInventory.Size = new System.Drawing.Size(200, 367);
+            this.trvCurrentInventory.TabIndex = 0;
+            this.trvCurrentInventory.Tag = "current";
+            this.trvCurrentInventory.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.trvObjectInventory_NodeMouseClick);
+            this.trvCurrentInventory.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.TreeViewObject_NodeMouseDoubleClick);
+            // 
+            // tabInventoryContainer
+            // 
+            this.tabInventoryContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabInventoryContainer.ContextMenuStrip = this.cmsCurrentItems;
+            this.tabInventoryContainer.Controls.Add(this.tabCurrentInventory);
+            this.tabInventoryContainer.Controls.Add(this.tabPreviousInventory);
+            this.tabInventoryContainer.Depth = 0;
+            this.tabInventoryContainer.Location = new System.Drawing.Point(0, 29);
+            this.tabInventoryContainer.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tabInventoryContainer.Name = "tabInventoryContainer";
+            this.tabInventoryContainer.SelectedIndex = 0;
+            this.tabInventoryContainer.Size = new System.Drawing.Size(622, 399);
+            this.tabInventoryContainer.TabIndex = 1;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2732,22 +2732,7 @@
             this.tabMainContainer.ResumeLayout(false);
             this.tabFile.ResumeLayout(false);
             this.tabInventory.ResumeLayout(false);
-            this.tabInventoryContainer.ResumeLayout(false);
-            this.tabCurrentInventory.ResumeLayout(false);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nudCurrentItemCount)).EndInit();
-            this.tabPreviousInventory.ResumeLayout(false);
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            this.splitContainer2.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
             this.cmsPreviousItems.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nudPrevItemCount)).EndInit();
             this.tabCharacter.ResumeLayout(false);
             this.tabCharacterContainer.ResumeLayout(false);
             this.tabAdol.ResumeLayout(false);
@@ -2800,31 +2785,30 @@
             ((System.ComponentModel.ISupportInitialize)(this.picDana)).EndInit();
             this.tabCheats.ResumeLayout(false);
             this.tabCheats.PerformLayout();
+            this.tabPreviousInventory.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            this.splitContainer2.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrevItemCount)).EndInit();
+            this.tabCurrentInventory.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nudCurrentItemCount)).EndInit();
+            this.tabInventoryContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.SaveFileDialog sfdSaveFile;
-        private System.Windows.Forms.TreeView trvCurrentInventory;
         private MaterialSkin.Controls.MaterialTabControl tabMainContainer;
         private System.Windows.Forms.TabPage tabFile;
         private System.Windows.Forms.TabPage tabInventory;
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialLabel lblCurrentItemEffect;
-        private MaterialSkin.Controls.MaterialLabel lblCurrentItemDescription;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialLabel lblCurrentItemName;
-        private MaterialSkin.Controls.MaterialLabel lblCurrentItemId;
-        private MaterialSkin.Controls.MaterialLabel lblCurrentItemType;
-        private MaterialSkin.Controls.MaterialLabel materialLabel5;
-        private MaterialSkin.Controls.MaterialLabel materialLabel4;
-        private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private System.Windows.Forms.NumericUpDown nudCurrentItemCount;
-        private MaterialSkin.Controls.MaterialLabel lblCurrentItemCount;
-        private MaterialSkin.Controls.MaterialLabel lblCurrentItemRank;
-        private MaterialSkin.Controls.MaterialLabel materialLabel6;
         private MaterialSkin.Controls.MaterialTabSelector materialTabSelector1;
         private MaterialSkin.Controls.MaterialRaisedButton btnSave;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
@@ -2861,25 +2845,6 @@
         private System.Windows.Forms.ComboBox cmbAdolWeaponEq;
         private MaterialSkin.Controls.MaterialLabel materialLabel26;
         private MaterialSkin.Controls.MaterialTabSelector materialTabSelector4;
-        private MaterialSkin.Controls.MaterialTabControl tabInventoryContainer;
-        private System.Windows.Forms.TabPage tabCurrentInventory;
-        private System.Windows.Forms.TabPage tabPreviousInventory;
-        private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.TreeView trvPreviousInventory;
-        private MaterialSkin.Controls.MaterialLabel lblPrevItemRank;
-        private MaterialSkin.Controls.MaterialLabel materialLabel33;
-        private System.Windows.Forms.NumericUpDown nudPrevItemCount;
-        private MaterialSkin.Controls.MaterialLabel lblPrevItemCount;
-        private MaterialSkin.Controls.MaterialLabel lblPrevItemName;
-        private MaterialSkin.Controls.MaterialLabel lblPrevItemId;
-        private MaterialSkin.Controls.MaterialLabel lblPrevItemType;
-        private MaterialSkin.Controls.MaterialLabel materialLabel38;
-        private MaterialSkin.Controls.MaterialLabel materialLabel39;
-        private MaterialSkin.Controls.MaterialLabel materialLabel40;
-        private MaterialSkin.Controls.MaterialLabel lblPrevItemDescription;
-        private MaterialSkin.Controls.MaterialLabel materialLabel42;
-        private MaterialSkin.Controls.MaterialLabel lblPrevItemEffect;
-        private MaterialSkin.Controls.MaterialLabel materialLabel44;
         private System.Windows.Forms.ComboBox cmbAdolArmEq;
         private MaterialSkin.Controls.MaterialLabel materialLabel9;
         private MaterialSkin.Controls.MaterialContextMenuStrip cmsCurrentItems;
@@ -2988,6 +2953,41 @@
         private MaterialSkin.Controls.MaterialRadioButton radPreviousInventory;
         private MaterialSkin.Controls.MaterialRadioButton radCurrentInventory;
         private System.Windows.Forms.ToolTip tipEquippedItem;
+        private MaterialSkin.Controls.MaterialTabControl tabInventoryContainer;
+        private System.Windows.Forms.TabPage tabCurrentInventory;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.TreeView trvCurrentInventory;
+        private MaterialSkin.Controls.MaterialLabel lblCurrentItemRank;
+        private MaterialSkin.Controls.MaterialLabel materialLabel6;
+        private System.Windows.Forms.NumericUpDown nudCurrentItemCount;
+        private MaterialSkin.Controls.MaterialLabel lblCurrentItemCount;
+        private MaterialSkin.Controls.MaterialLabel lblCurrentItemName;
+        private MaterialSkin.Controls.MaterialLabel lblCurrentItemId;
+        private MaterialSkin.Controls.MaterialLabel lblCurrentItemType;
+        private MaterialSkin.Controls.MaterialLabel materialLabel5;
+        private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private MaterialSkin.Controls.MaterialLabel lblCurrentItemDescription;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialLabel lblCurrentItemEffect;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private System.Windows.Forms.TabPage tabPreviousInventory;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.TreeView trvPreviousInventory;
+        private MaterialSkin.Controls.MaterialLabel lblPrevItemRank;
+        private MaterialSkin.Controls.MaterialLabel materialLabel33;
+        private System.Windows.Forms.NumericUpDown nudPrevItemCount;
+        private MaterialSkin.Controls.MaterialLabel lblPrevItemCount;
+        private MaterialSkin.Controls.MaterialLabel lblPrevItemName;
+        private MaterialSkin.Controls.MaterialLabel lblPrevItemId;
+        private MaterialSkin.Controls.MaterialLabel lblPrevItemType;
+        private MaterialSkin.Controls.MaterialLabel materialLabel38;
+        private MaterialSkin.Controls.MaterialLabel materialLabel39;
+        private MaterialSkin.Controls.MaterialLabel materialLabel40;
+        private MaterialSkin.Controls.MaterialLabel lblPrevItemDescription;
+        private MaterialSkin.Controls.MaterialLabel materialLabel42;
+        private MaterialSkin.Controls.MaterialLabel lblPrevItemEffect;
+        private MaterialSkin.Controls.MaterialLabel materialLabel44;
     }
 }
 

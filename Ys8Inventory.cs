@@ -10,6 +10,7 @@ namespace Save_Editor
     {
         #region Fields
         private Ys8Data m_database;
+        private const int m_countableItemStart = 130;
         #endregion
 
         #region Properties
@@ -45,38 +46,30 @@ namespace Save_Editor
 
             int id = 0;
             int i = 0;
-            byte bitValue = 0;
+            int bitValue = 0;
             while (id <= m_database.Ys8Items.Count)
             {
                 for (int x = 0; x < 8; x += 2)
                 {
                     Ys8SaveItem tempItem;
-                    string idString;
-                    bitValue = (byte)((data[itemsObtainedOffset + i] >> x) & 3);
+                    bitValue = ((data[itemsObtainedOffset + i] >> x) & 3);
 
                     if (bitValue != 0)
                     {
                         tempItem = new Ys8SaveItem(m_database.Ys8Items[id]);
-                        idString = id.ToString();
 
-                        switch (bitValue)
+                        if (bitValue == 3)
                         {
-                            case 3:
-                                {
-                                    Items.Add(id, tempItem);
-                                    Unknown.Add(id, 1);
-                                    break;
-                                }
-                            case 2:
-                                {
-                                    Unknown.Add(id, 1);
-                                    break;
-                                }
-                            case 1:
-                                {
-                                    Items.Add(id, tempItem);
-                                    break;
-                                }
+                            Items.Add(id, tempItem);
+                            Unknown.Add(id, 1);
+                        }
+                        else if(bitValue == 2)
+                        {
+                            Unknown.Add(id, 1);
+                        }
+                        else if (bitValue == 1)
+                        {
+                            Items.Add(id, tempItem);
                         }
                     }
                     ++id;
@@ -89,8 +82,8 @@ namespace Save_Editor
             long countOffset = Offsets["count"];
             foreach (KeyValuePair<int, Ys8SaveItem> item in Items)
             {
-                if (item.Value.Parent.ID > 130)
-                    item.Value.Count = BitConverter.ToInt16(data, (int)countOffset + (item.Value.ID - 130) * 2);
+                if (item.Value.Parent.ID > m_countableItemStart)
+                    item.Value.Count = BitConverter.ToInt16(data, (int)countOffset + (item.Value.ID - m_countableItemStart) * 2);
             }
         }
         private void SaveItemData(byte[] data)
@@ -110,8 +103,8 @@ namespace Save_Editor
 
                 data[itemsObtainedOffset + bytePosition] = (byte)(data[itemsObtainedOffset + bytePosition] | (byte)(1 << bitPosition));
 
-                byte[] countBytes = BitConverter.GetBytes(item.Value.Count);
-                countBytes.CopyTo(data, (int)itemsCountOffset + (item.Value.ID - 131) * 2);
+                byte[] countBytes = BitConverter.GetBytes((short)item.Value.Count);
+                countBytes.CopyTo(data, (int)itemsCountOffset + (item.Value.ID - 130) * 2);
             }
 
             foreach (KeyValuePair<int, int> unknownValue in Unknown)
