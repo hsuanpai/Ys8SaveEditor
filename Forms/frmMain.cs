@@ -604,8 +604,9 @@ namespace Save_Editor
             if (!Directory.Exists(backupPath))
                 Directory.CreateDirectory(backupPath);
 
-            string[] files = Directory.GetFiles(backupPath, "*.dat.*");
-            m_save.BackupSave($"{backupPath}\\SAVEDATA.DAT.{files.Length+1}");
+            backupPath += $"\\{DateTime.Now.ToString("yyyyddMMhhmmss")}";
+            Directory.CreateDirectory(backupPath);
+            m_save.BackupSave($"{backupPath}\\SAVEDATA.DAT");
         }
 #endregion
 
