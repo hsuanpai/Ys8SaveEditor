@@ -54,14 +54,34 @@ namespace Save_Editor
         #endregion
 
         #region Helper Methods
+        private void ClearCharacterCheckBoxes()
+        {
+            chkAdolHp.Checked = false;
+            chkSahadHp.Checked = false;
+            chkHummHp.Checked = false;
+            chkLaxiaHp.Checked = false;
+            chkRicoHp.Checked = false;
+            chkDanaHp.Checked = false;
+        }
         private void ClearCharacterDataBindings()
         {
             nudAdolLvl.DataBindings.Clear();
+            nudAdolMaxHp.DataBindings.Clear();
+
             nudSahadLvl.DataBindings.Clear();
+            nudSahadMaxHp.DataBindings.Clear();
+
             nudHummLvl.DataBindings.Clear();
+            nudHummMaxHp.DataBindings.Clear();
+
             nudLaxiaLvl.DataBindings.Clear();
+            nudLaxiaMaxHp.DataBindings.Clear();
+
             nudRicoLvl.DataBindings.Clear();
+            nudRicoMaxHp.DataBindings.Clear();
+
             nudDanaLvl.DataBindings.Clear();
+            nudDanaMaxHp.DataBindings.Clear();
 
             foreach (ComboBox cmbObject in tabAdolInfoContainer.TabPages[1].Controls.OfType<ComboBox>())
             {
@@ -488,7 +508,10 @@ namespace Save_Editor
         {
             if (character.Name == "Adol")
             {
+                chkAdolHp.Tag = nudAdolMaxHp;
+
                 nudAdolLvl.DataBindings.Add("Value", character, "Level");
+                nudAdolMaxHp.DataBindings.Add("Value", character, "MaxHp", false, DataSourceUpdateMode.OnPropertyChanged);
 
                 cmbAdolWeaponEq.DataBindings.Add("SelectedItem", character, "Weapon", false, DataSourceUpdateMode.OnPropertyChanged);
                 cmbAdolBodyEq.DataBindings.Add("SelectedItem", character, "Body", false, DataSourceUpdateMode.OnPropertyChanged);
@@ -498,7 +521,10 @@ namespace Save_Editor
             }
             else if (character.Name == "Sahad")
             {
+                chkSahadHp.Tag = nudSahadMaxHp;
+
                 nudSahadLvl.DataBindings.Add("Value", character, "Level");
+                nudSahadMaxHp.DataBindings.Add("Value", character, "MaxHp", false, DataSourceUpdateMode.OnPropertyChanged);
 
                 cmbSahadWeaponEq.DataBindings.Add("SelectedItem", character, "Weapon", false, DataSourceUpdateMode.OnPropertyChanged);
                 cmbSahadBodyEq.DataBindings.Add("SelectedItem", character, "Body", false, DataSourceUpdateMode.OnPropertyChanged);
@@ -508,7 +534,10 @@ namespace Save_Editor
             }
             else if (character.Name == "Hummel")
             {
+                chkHummHp.Tag = nudHummMaxHp;
+
                 nudHummLvl.DataBindings.Add("Value", character, "Level");
+                nudHummMaxHp.DataBindings.Add("Value", character, "MaxHp", false, DataSourceUpdateMode.OnPropertyChanged);
 
                 cmbHummWeaponEq.DataBindings.Add("SelectedItem", character, "Weapon", false, DataSourceUpdateMode.OnPropertyChanged);
                 cmbHummBodyEq.DataBindings.Add("SelectedItem", character, "Body", false, DataSourceUpdateMode.OnPropertyChanged);
@@ -518,7 +547,10 @@ namespace Save_Editor
             }
             else if (character.Name == "Laxia")
             {
+                chkLaxiaHp.Tag = nudLaxiaMaxHp;
+                
                 nudLaxiaLvl.DataBindings.Add("Value", character, "Level");
+                nudLaxiaMaxHp.DataBindings.Add("Value", character, "MaxHp", false, DataSourceUpdateMode.OnPropertyChanged);
 
                 cmbLaxiaWeaponEq.DataBindings.Add("SelectedItem", character, "Weapon", false, DataSourceUpdateMode.OnPropertyChanged);
                 cmbLaxiaBodyEq.DataBindings.Add("SelectedItem", character, "Body", false, DataSourceUpdateMode.OnPropertyChanged);
@@ -528,7 +560,10 @@ namespace Save_Editor
             }
             else if (character.Name == "Ricotta")
             {
+                chkRicoHp.Tag = nudRicoMaxHp;
+
                 nudRicoLvl.DataBindings.Add("Value", character, "Level");
+                nudRicoMaxHp.DataBindings.Add("Value", character, "MaxHp", false, DataSourceUpdateMode.OnPropertyChanged);
 
                 cmbRicoWeaponEq.DataBindings.Add("SelectedItem", character, "Weapon", false, DataSourceUpdateMode.OnPropertyChanged);
                 cmbRicoBodyEq.DataBindings.Add("SelectedItem", character, "Body", false, DataSourceUpdateMode.OnPropertyChanged);
@@ -538,7 +573,10 @@ namespace Save_Editor
             }
             else if (character.Name == "Dana")
             {
+                chkDanaHp.Tag = nudDanaMaxHp;
+
                 nudDanaLvl.DataBindings.Add("Value", character, "Level");
+                nudDanaMaxHp.DataBindings.Add("Value", character, "MaxHp", false, DataSourceUpdateMode.OnPropertyChanged);
 
                 cmbDanaWeaponEq.DataBindings.Add("SelectedItem", character, "Weapon", false, DataSourceUpdateMode.OnPropertyChanged);
                 cmbDanaBodyEq.DataBindings.Add("SelectedItem", character, "Body", false, DataSourceUpdateMode.OnPropertyChanged);
@@ -547,9 +585,31 @@ namespace Save_Editor
                 cmbDanaAccessory2Eq.DataBindings.Add("SelectedItem", character, "Accessory2", false, DataSourceUpdateMode.OnPropertyChanged);
             }
         }
+        private void SetCharacterMaxHp(NumericUpDown nudObject, bool setMaxHp)
+        {
+            if (nudObject == null)
+                return;
+
+            if (setMaxHp)
+            {
+                nudObject.Value = (decimal)Ys8Character.MaxHpValue;
+                nudObject.Validate();
+            }
+            nudObject.ReadOnly = setMaxHp;
+            nudObject.Increment = Convert.ToDecimal(!setMaxHp);
+        }
+        private void BackupSave()
+        {
+            string backupPath = "backups";
+            if (!Directory.Exists(backupPath))
+                Directory.CreateDirectory(backupPath);
+
+            string[] files = Directory.GetFiles(backupPath, "*.dat.*");
+            m_save.BackupSave($"{backupPath}\\SAVEDATA.DAT.{files.Length+1}");
+        }
 #endregion
 
-#region Methods
+        #region Methods
         public Ys8Save LoadSave(string path)
         {
             Ys8Save tempSave = new Ys8Save(m_database, path);
@@ -569,16 +629,17 @@ namespace Save_Editor
         public void SetSave(Ys8Save save)
         {
             ClearCharacterDataBindings();
+            ClearCharacterCheckBoxes();
 
-            //SetComboBoxData();
+            SetComboBoxData();
             SetInventories(save);
             SetCharacters(save);
 
             m_save = save;
         }
-#endregion
+        #endregion
 
-#region Control Methods
+        #region Control Methods
         private void frmMain_Load(object sender, EventArgs e)
         {
             ClearLabels();
@@ -603,6 +664,7 @@ namespace Save_Editor
             {
                 try
                 {
+                    BackupSave();
                     m_save.Save(sfdSaveFile.FileName);
                 }
                 catch (Exception ex)
@@ -760,6 +822,17 @@ namespace Save_Editor
                 }
             }
         }
-#endregion
+
+        private void chkCharacterMaxHp_CheckedChanged(object sender, EventArgs e)
+        {
+            MaterialCheckBox chkObject = sender as MaterialCheckBox;
+            if (chkObject is MaterialCheckBox)
+            {
+                SetCharacterMaxHp((NumericUpDown)chkObject.Tag, chkObject.Checked);
+            }
+        }
+
+        #endregion
+
     }
 }

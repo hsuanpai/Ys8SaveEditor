@@ -125,31 +125,37 @@ namespace Save_Editor
         private Dictionary<string, long> m_adolOffsets = new Dictionary<string, long>()
         {
             { "level", 0x44 },
+            { "max_hp", 0x48 },
             { "equipped", 0x7d0 }
         };
         private Dictionary<string, long> m_laxiaOffsets = new Dictionary<string, long>()
         {
             { "level", 0x6c },
+            { "max_hp", 0x70 },
             { "equipped", 0x96c }
         };
         private Dictionary<string, long> m_sahadOffsets = new Dictionary<string, long>()
         {
             { "level", 0x94 },
+            { "max_hp", 0x98 },
             { "equipped", 0xb08 }
         };
         private Dictionary<string, long> m_hummelOffsets = new Dictionary<string, long>()
         {
             { "level", 0xbc },
+            { "max_hp", 0xc0 },
             { "equipped", 0xca4 }
         };
         private Dictionary<string, long> m_ricottaOffsets = new Dictionary<string, long>()
         {
             { "level", 0xe4 },
+            { "max_hp", 0xe8 },
             { "equipped", 0xe40 }
         };
         private Dictionary<string, long> m_danaOffsets = new Dictionary<string, long>()
         {
             { "level", 0x10c },
+            { "max_hp", 0x110 },
             { "equipped", 0xfdc }
         };
         private Dictionary<string, long> m_currentInventoryOffsets = new Dictionary<string, long>()
@@ -254,6 +260,11 @@ namespace Save_Editor
             PreviousInventory.Save(m_data);
             FixChecksum();
 
+            File.WriteAllBytes(path, m_data);
+        }
+        
+        public void BackupSave(string path)
+        {
             File.WriteAllBytes(path, m_data);
         }
         #endregion
