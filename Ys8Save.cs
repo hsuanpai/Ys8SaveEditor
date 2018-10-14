@@ -126,36 +126,42 @@ namespace Save_Editor
         {
             { "level", 0x44 },
             { "max_hp", 0x48 },
+            { "skills",  0x684 },
             { "equipped", 0x7d0 }
         };
         private Dictionary<string, long> m_laxiaOffsets = new Dictionary<string, long>()
         {
             { "level", 0x6c },
             { "max_hp", 0x70 },
+            { "skills", 0x820 },
             { "equipped", 0x96c }
         };
         private Dictionary<string, long> m_sahadOffsets = new Dictionary<string, long>()
         {
             { "level", 0x94 },
             { "max_hp", 0x98 },
+            { "skills", 0x9bc },
             { "equipped", 0xb08 }
         };
         private Dictionary<string, long> m_hummelOffsets = new Dictionary<string, long>()
         {
             { "level", 0xbc },
             { "max_hp", 0xc0 },
+            { "skills", 0xb58 },
             { "equipped", 0xca4 }
         };
         private Dictionary<string, long> m_ricottaOffsets = new Dictionary<string, long>()
         {
             { "level", 0xe4 },
             { "max_hp", 0xe8 },
+            { "skills", 0xcf4 },
             { "equipped", 0xe40 }
         };
         private Dictionary<string, long> m_danaOffsets = new Dictionary<string, long>()
         {
             { "level", 0x10c },
             { "max_hp", 0x110 },
+            { "skills", 0xe90 },
             { "equipped", 0xfdc }
         };
         private Dictionary<string, long> m_currentInventoryOffsets = new Dictionary<string, long>()
@@ -214,12 +220,12 @@ namespace Save_Editor
         }
         private void InitializeCharacters()
         {
-            Characters.Add(new Ys8Character("Adol") { Offsets = m_adolOffsets });
-            Characters.Add(new Ys8Character("Laxia") { Offsets = m_laxiaOffsets });
-            Characters.Add(new Ys8Character("Sahad") { Offsets = m_sahadOffsets });
-            Characters.Add(new Ys8Character("Hummel") { Offsets = m_hummelOffsets });
-            Characters.Add(new Ys8Character("Ricotta") { Offsets = m_ricottaOffsets });
-            Characters.Add(new Ys8Character("Dana") { Offsets = m_danaOffsets});
+            Characters.Add(new Ys8Character(Ys8CharacterEnum.Adol) { Offsets = m_adolOffsets });
+            Characters.Add(new Ys8Character(Ys8CharacterEnum.Laxia) { Offsets = m_laxiaOffsets });
+            Characters.Add(new Ys8Character(Ys8CharacterEnum.Sahad) { Offsets = m_sahadOffsets });
+            Characters.Add(new Ys8Character(Ys8CharacterEnum.Hummel) { Offsets = m_hummelOffsets });
+            Characters.Add(new Ys8Character(Ys8CharacterEnum.Ricotta) { Offsets = m_ricottaOffsets });
+            Characters.Add(new Ys8Character(Ys8CharacterEnum.Dana) { Offsets = m_danaOffsets});
         }
         unsafe private void FixChecksum()
         {

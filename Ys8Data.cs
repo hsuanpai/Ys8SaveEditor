@@ -17,13 +17,16 @@ namespace Save_Editor
         public List<Ys8Item> Ys8Items
         {
             get; internal set;
-        }
+        } = new List<Ys8Item>();
+        public List<Ys8Skill> Ys8Skills
+        {
+            get; internal set;
+        } = new List<Ys8Skill>();
         #endregion
 
         #region Constructor/Destructors
         public Ys8Data()
         {
-            Ys8Items = new List<Ys8Item>();
         }
         #endregion
 

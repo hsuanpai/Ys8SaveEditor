@@ -54,6 +54,18 @@ namespace Save_Editor
         #endregion
 
         #region Helper Methods
+        // Character Methods
+        private void ClearControlBinding(Control controlObject)
+        {
+            controlObject.DataBindings.Clear();
+
+            foreach (Control control in controlObject.Controls)
+            {
+                control.DataBindings.Clear();
+                if (control.HasChildren)
+                    ClearControlBinding(control);
+            }
+        }
         private void ClearCharacterCheckBoxes()
         {
             chkAdolHp.Checked = false;
@@ -65,49 +77,177 @@ namespace Save_Editor
         }
         private void ClearCharacterDataBindings()
         {
-            nudAdolLvl.DataBindings.Clear();
-            nudAdolMaxHp.DataBindings.Clear();
-
-            nudSahadLvl.DataBindings.Clear();
-            nudSahadMaxHp.DataBindings.Clear();
-
-            nudHummLvl.DataBindings.Clear();
-            nudHummMaxHp.DataBindings.Clear();
-
-            nudLaxiaLvl.DataBindings.Clear();
-            nudLaxiaMaxHp.DataBindings.Clear();
-
-            nudRicoLvl.DataBindings.Clear();
-            nudRicoMaxHp.DataBindings.Clear();
-
-            nudDanaLvl.DataBindings.Clear();
-            nudDanaMaxHp.DataBindings.Clear();
-
-            foreach (ComboBox cmbObject in tabAdolInfoContainer.TabPages[1].Controls.OfType<ComboBox>())
+            foreach (Control control in this.Controls)
             {
-                cmbObject.DataBindings.Clear();
-            }
-            foreach (ComboBox cmbObject in tabSahadInfoContainer.TabPages[1].Controls.OfType<ComboBox>())
-            {
-                cmbObject.DataBindings.Clear();
-            }
-            foreach (ComboBox cmbObject in tabHummInfoContainer.TabPages[1].Controls.OfType<ComboBox>())
-            {
-                cmbObject.DataBindings.Clear();
-            }
-            foreach (ComboBox cmbObject in tabLaxiaInfoContainer.TabPages[1].Controls.OfType<ComboBox>())
-            {
-                cmbObject.DataBindings.Clear();
-            }
-            foreach (ComboBox cmbObject in tabRicoInfoContainer.TabPages[1].Controls.OfType<ComboBox>())
-            {
-                cmbObject.DataBindings.Clear();
-            }
-            foreach (ComboBox cmbObject in tabDanaInfoContainer.TabPages[1].Controls.OfType<ComboBox>())
-            {
-                cmbObject.DataBindings.Clear();
+                control.DataBindings.Clear();
+                if (control.HasChildren)
+                {
+                    ClearControlBinding(control);
+                }
             }
         }
+        private void SetCharacterControls(Ys8Character character)
+        {
+            MaterialCheckBox chkCharacterHp = null;
+            MaterialCheckBox chkCharacterSkillUnlocked = null;
+            NumericUpDown nudCharacterLvl = null;
+            NumericUpDown nudCharacterMaxHp = null;
+            NumericUpDown nudCharacterSkillRank = null;
+            ComboBox cmbCharacterWeaponEq = null;
+            ComboBox cmbCharacterBodyEq = null;
+            ComboBox cmbCharacterArmEq = null;
+            ComboBox cmbCharacterAccessory1Eq = null;
+            ComboBox cmbCharacterAccessory2Eq = null;
+            ListBox lstCharacterSkills = null;
+            if (character.Character == Ys8CharacterEnum.Adol)
+            {
+                // CheckBox
+                chkCharacterHp = chkAdolHp;
+                chkCharacterSkillUnlocked = chkAdolSkillUnlocked;
+                // NumericUpDown
+                nudCharacterLvl = nudAdolLvl;
+                nudCharacterMaxHp = nudAdolMaxHp;
+                nudCharacterSkillRank = nudAdolSkillRank;
+                // ComboBox
+                cmbCharacterWeaponEq = cmbAdolWeaponEq;
+                cmbCharacterBodyEq = cmbAdolBodyEq;
+                cmbCharacterArmEq = cmbAdolArmEq;
+                cmbCharacterAccessory1Eq = cmbAdolAccessory1Eq;
+                cmbCharacterAccessory2Eq = cmbAdolAccessory2Eq;
+                // ListBox
+                lstCharacterSkills = lstAdolSkills;
+            }
+            else if (character.Character == Ys8CharacterEnum.Sahad)
+            {
+                // CheckBox
+                chkCharacterHp = chkSahadHp;
+                chkCharacterSkillUnlocked = chkSahadSkillUnlocked;
+                // NumericUpDown
+                nudCharacterLvl = nudSahadLvl;
+                nudCharacterMaxHp = nudSahadMaxHp;
+                nudCharacterSkillRank = nudSahadSkillRank;
+                // ComboBox
+                cmbCharacterWeaponEq = cmbSahadWeaponEq;
+                cmbCharacterBodyEq = cmbSahadBodyEq;
+                cmbCharacterArmEq = cmbSahadArmEq;
+                cmbCharacterAccessory1Eq = cmbSahadAccessory1Eq;
+                cmbCharacterAccessory2Eq = cmbSahadAccessory2Eq;
+                // ListBox
+                lstCharacterSkills = lstSahadSkills;
+            }
+            else if (character.Character == Ys8CharacterEnum.Hummel)
+            {
+                // CheckBox
+                chkCharacterHp = chkHummHp;
+                chkCharacterSkillUnlocked = chkHummSkillUnlocked;
+                // NumericUpDown
+                nudCharacterLvl = nudHummLvl;
+                nudCharacterMaxHp = nudHummMaxHp;
+                nudCharacterSkillRank = nudHummSkillRank;
+                // ComboBox
+                cmbCharacterWeaponEq = cmbHummWeaponEq;
+                cmbCharacterBodyEq = cmbHummBodyEq;
+                cmbCharacterArmEq = cmbHummArmEq;
+                cmbCharacterAccessory1Eq = cmbHummAccessory1Eq;
+                cmbCharacterAccessory2Eq = cmbHummAccessory2Eq;
+                // ListBox
+                lstCharacterSkills = lstHummSkills;
+            }
+            else if (character.Character == Ys8CharacterEnum.Laxia)
+            {
+                // CheckBox
+                chkCharacterHp = chkLaxiaHp;
+                chkCharacterSkillUnlocked = chkLaxiaSkillUnlocked;
+                // NumericUpDown
+                nudCharacterLvl = nudLaxiaLvl;
+                nudCharacterMaxHp = nudLaxiaMaxHp;
+                nudCharacterSkillRank = nudLaxiaSkillRank;
+                // ComboBox
+                cmbCharacterWeaponEq = cmbLaxiaWeaponEq;
+                cmbCharacterBodyEq = cmbLaxiaBodyEq;
+                cmbCharacterArmEq = cmbLaxiaArmEq;
+                cmbCharacterAccessory1Eq = cmbLaxiaAccessory1Eq;
+                cmbCharacterAccessory2Eq = cmbLaxiaAccessory2Eq;
+                // ListBox
+                lstCharacterSkills = lstLaxiaSkills;
+            }
+            else if (character.Character == Ys8CharacterEnum.Ricotta)
+            {
+                // CheckBox
+                chkCharacterHp = chkRicoHp;
+                chkCharacterSkillUnlocked = chkRicoSkillUnlocked;
+                // NumericUpDown
+                nudCharacterLvl = nudRicoLvl;
+                nudCharacterMaxHp = nudRicoMaxHp;
+                nudCharacterSkillRank = nudRicoSkillRank;
+                // ComboBox
+                cmbCharacterWeaponEq = cmbRicoWeaponEq;
+                cmbCharacterBodyEq = cmbRicoBodyEq;
+                cmbCharacterArmEq = cmbRicoArmEq;
+                cmbCharacterAccessory1Eq = cmbRicoAccessory1Eq;
+                cmbCharacterAccessory2Eq = cmbRicoAccessory2Eq;
+                // ListBox
+                lstCharacterSkills = lstRicoSkills;
+            }
+            else if (character.Character == Ys8CharacterEnum.Dana)
+            {
+                // CheckBox
+                chkCharacterHp = chkDanaHp;
+                chkCharacterSkillUnlocked = chkDanaSkillUnlocked;
+                // NumericUpDown
+                nudCharacterLvl = nudDanaLvl;
+                nudCharacterMaxHp = nudDanaMaxHp;
+                nudCharacterSkillRank = nudDanaSkillRank;
+                // ComboBox
+                cmbCharacterWeaponEq = cmbDanaWeaponEq;
+                cmbCharacterBodyEq = cmbDanaBodyEq;
+                cmbCharacterArmEq = cmbDanaArmEq;
+                cmbCharacterAccessory1Eq = cmbDanaAccessory1Eq;
+                cmbCharacterAccessory2Eq = cmbDanaAccessory2Eq;
+                // ListBox
+                lstCharacterSkills = lstDanaSkills;
+            }
+
+            chkCharacterHp.Tag = nudCharacterMaxHp;
+            chkCharacterSkillUnlocked.DataBindings.Add("Checked", character.Skills, "Unlocked");
+
+            nudCharacterLvl.DataBindings.Add("Value", character, "Level", false, DataSourceUpdateMode.OnPropertyChanged);
+            nudCharacterMaxHp.DataBindings.Add("Value", character, "MaxHp",false, DataSourceUpdateMode.OnPropertyChanged);
+            nudCharacterSkillRank.DataBindings.Add("Value", character.Skills, "Rank", false, DataSourceUpdateMode.OnPropertyChanged);
+
+            cmbCharacterWeaponEq.DataBindings.Add("SelectedItem", character, "Weapon", false, DataSourceUpdateMode.OnPropertyChanged);
+            cmbCharacterBodyEq.DataBindings.Add("SelectedItem", character, "Body", false, DataSourceUpdateMode.OnPropertyChanged);
+            cmbCharacterArmEq.DataBindings.Add("SelectedItem", character, "Arm", false, DataSourceUpdateMode.OnPropertyChanged);
+            cmbCharacterAccessory1Eq.DataBindings.Add("SelectedItem", character, "Accessory1", false, DataSourceUpdateMode.OnPropertyChanged);
+            cmbCharacterAccessory2Eq.DataBindings.Add("SelectedItem", character, "Accessory2", false, DataSourceUpdateMode.OnPropertyChanged);
+
+            SetCharacterListBox(lstCharacterSkills, character);
+        }
+        private void SetCharacterListBox(ListBox lstCharacterSkills, Ys8Character character)
+        {
+            lstCharacterSkills.Tag = character;
+            lstCharacterSkills.DataSource = character.Skills;
+            lstCharacterSkills.DisplayMember = "Name";
+        }
+        private void SetCharacterMaxHp(NumericUpDown nudObject, bool setMaxHp)
+        {
+            if (nudObject == null)
+                return;
+
+            if (setMaxHp)
+            {
+                nudObject.Value = (decimal)Ys8Character.MaxHpValue;
+                nudObject.Validate();
+            }
+            nudObject.ReadOnly = setMaxHp;
+            nudObject.Increment = Convert.ToDecimal(!setMaxHp);
+        }
+        private void SetCharacters(Ys8Save save)
+        {
+            foreach (Ys8Character character in save.Characters)
+                SetCharacterControls(character);
+        }
+        // Label Methods
         private void ClearLabels()
         {
             lblCurrentItemName.Text = string.Empty;
@@ -124,86 +264,11 @@ namespace Save_Editor
             lblPrevItemEffect.Text = string.Empty;
             lblPrevItemDescription.Text = string.Empty;
         }
-        // Move to a splash screen
-        private void GetItemData()
+        private void GetDatabase()
         {
-            m_database = Ys8Data.DeserializeFromString(Properties.Resources.Items);
+            m_database = Ys8Data.DeserializeFromString(Properties.Resources.Database);
         }
-        private string GetNodeKey(Ys8ItemType itemType)
-        {
-            string key = string.Empty;
-
-            if (itemType == Ys8ItemType.Unknown)
-            {
-                key = "UNKNOWN";
-            }
-            else if (itemType == Ys8ItemType.DLC)
-            {
-                key = "DLC";
-            }
-            else if (Ys8Item.WeaponTypes.Contains(itemType))
-            {
-                key = "WEAPONS";
-            }
-            else if (Ys8Item.OutfitTypes.Contains(itemType))
-            {
-                key = "OUTFITS";
-            }
-            else if (Ys8Item.AttachmentTypes.Contains(itemType))
-            {
-                key = "ATTACHMENTS";
-            }
-            else if (Ys8Item.AccessoryTypes.Contains(itemType))
-            {
-                key = "ACCESSORIES";
-            }
-            else if (Ys8Item.ArmorTypes.Contains(itemType))
-            {
-                key = "ARMOR";
-            }
-            else if (Ys8Item.ArmTypes.Contains(itemType))
-            {
-                key = "ARM";
-            }
-            else if (Ys8Item.MaterialTypes.Contains(itemType))
-            {
-                key = "MATERIALS";
-            }
-            else if (Ys8Item.RareMaterialTypes.Contains(itemType))
-            {
-                key = "RARE_MATERIALS";
-            }
-            else if (Ys8Item.ConsumableTypes.Contains(itemType))
-            {
-                key = "CONSUMABLES";
-            }
-            else if (Ys8Item.BookTypes.Contains(itemType))
-            {
-                key = "BOOKS";
-            }
-            else if (Ys8Item.IngredientTypes.Contains(itemType))
-            {
-                key = "INGREDIENTS";
-            }
-            else if (Ys8Item.InventoryTypes.Contains(itemType))
-            {
-                key = "INVENTORY";
-            }
-            else if (Ys8Item.FishTypes.Contains(itemType))
-            {
-                key = "FISH";
-            }
-            else if (Ys8Item.InstantTypes.Contains(itemType))
-            {
-                key = "INSTANT";
-            }
-            else if (Ys8Item.EquipmentTypes.Contains(itemType))
-            {
-                key = "EQUIPMENT";
-            }
-
-            return key;
-        }
+        // Inventory Methods
         private void SetInventories(Ys8Save save)
         {
             FillTreeView(save.CurrentInventory, trvCurrentInventory);
@@ -287,12 +352,7 @@ namespace Save_Editor
                 };
                 selectedNode.Nodes.Add(childNode);
             }
-        }
-        private void SetCharacters(Ys8Save save)
-        {
-            foreach (Ys8Character character in save.Characters)
-                SetCharacterControls(character);
-        }
+        }        
         private void SetItemValues(Ys8SaveItem saveItem, bool previousInventory)
         {
             Ys8Item parentItem = saveItem.Parent;
@@ -336,7 +396,6 @@ namespace Save_Editor
             {
                 lblItemCount.Visible = false;
                 nudItemCount.Visible = false;
-
             }
             else
             {
@@ -347,32 +406,82 @@ namespace Save_Editor
                 nudItemCount.DataBindings.Add("Value", saveItem, "Count");
             }
         }
-        private void SetPreviousItemLabels(Ys8SaveItem saveItem)
+        private string GetNodeKey(Ys8ItemType itemType)
         {
-            Ys8Item parentItem = saveItem.Parent;
+            string key = string.Empty;
 
-            lblCurrentItemName.Text = parentItem.Name;
-            lblCurrentItemId.Text = parentItem.ID.ToString() + string.Format(" (0x{0:X8}h)", parentItem.ID);
-            lblCurrentItemType.Text = Enum.GetName(typeof(Ys8ItemType), parentItem.Type);
-            lblCurrentItemRank.Text = parentItem.Rank.ToString();
-            lblCurrentItemEffect.Text = parentItem.EffectDescription;
-            lblCurrentItemDescription.Text = parentItem.Description;
-
-            if (Ys8Item.WeaponTypes.Contains(parentItem.Type) || Ys8Item.EquipmentTypes.Contains(parentItem.Type) || parentItem.Type == Ys8ItemType.DLC)
+            if (itemType == Ys8ItemType.Unknown)
             {
-                lblCurrentItemCount.Visible = false;
-                nudCurrentItemCount.Visible = false;
-
+                key = "UNKNOWN";
             }
-            else
+            else if (itemType == Ys8ItemType.DLC)
             {
-                lblCurrentItemCount.Visible = true;
-                nudCurrentItemCount.Visible = true;
-
-                nudCurrentItemCount.DataBindings.Clear();
-                nudCurrentItemCount.DataBindings.Add("Value", saveItem, "Count");
+                key = "DLC";
             }
+            else if (Ys8Item.WeaponTypes.Contains(itemType))
+            {
+                key = "WEAPONS";
+            }
+            else if (Ys8Item.OutfitTypes.Contains(itemType))
+            {
+                key = "OUTFITS";
+            }
+            else if (Ys8Item.AttachmentTypes.Contains(itemType))
+            {
+                key = "ATTACHMENTS";
+            }
+            else if (Ys8Item.AccessoryTypes.Contains(itemType))
+            {
+                key = "ACCESSORIES";
+            }
+            else if (Ys8Item.ArmorTypes.Contains(itemType))
+            {
+                key = "ARMOR";
+            }
+            else if (Ys8Item.ArmTypes.Contains(itemType))
+            {
+                key = "ARM";
+            }
+            else if (Ys8Item.MaterialTypes.Contains(itemType))
+            {
+                key = "MATERIALS";
+            }
+            else if (Ys8Item.RareMaterialTypes.Contains(itemType))
+            {
+                key = "RARE_MATERIALS";
+            }
+            else if (Ys8Item.ConsumableTypes.Contains(itemType))
+            {
+                key = "CONSUMABLES";
+            }
+            else if (Ys8Item.BookTypes.Contains(itemType))
+            {
+                key = "BOOKS";
+            }
+            else if (Ys8Item.IngredientTypes.Contains(itemType))
+            {
+                key = "INGREDIENTS";
+            }
+            else if (Ys8Item.InventoryTypes.Contains(itemType))
+            {
+                key = "INVENTORY";
+            }
+            else if (Ys8Item.FishTypes.Contains(itemType))
+            {
+                key = "FISH";
+            }
+            else if (Ys8Item.InstantTypes.Contains(itemType))
+            {
+                key = "INSTANT";
+            }
+            else if (Ys8Item.EquipmentTypes.Contains(itemType))
+            {
+                key = "EQUIPMENT";
+            }
+
+            return key;
         }
+        // ComboBox Methods
         private void AddEmptyItems()
         {
             Ys8Item emptyItem = m_database.Ys8Items[0];
@@ -504,100 +613,7 @@ namespace Save_Editor
                 }
             }
         }
-        private void SetCharacterControls(Ys8Character character)
-        {
-            if (character.Name == "Adol")
-            {
-                chkAdolHp.Tag = nudAdolMaxHp;
-
-                nudAdolLvl.DataBindings.Add("Value", character, "Level");
-                nudAdolMaxHp.DataBindings.Add("Value", character, "MaxHp", false, DataSourceUpdateMode.OnPropertyChanged);
-
-                cmbAdolWeaponEq.DataBindings.Add("SelectedItem", character, "Weapon", false, DataSourceUpdateMode.OnPropertyChanged);
-                cmbAdolBodyEq.DataBindings.Add("SelectedItem", character, "Body", false, DataSourceUpdateMode.OnPropertyChanged);
-                cmbAdolArmEq.DataBindings.Add("SelectedItem", character, "Arm", false, DataSourceUpdateMode.OnPropertyChanged);
-                cmbAdolAccessory1Eq.DataBindings.Add("SelectedItem", character, "Accessory1", false, DataSourceUpdateMode.OnPropertyChanged);
-                cmbAdolAccessory2Eq.DataBindings.Add("SelectedItem", character, "Accessory2", false, DataSourceUpdateMode.OnPropertyChanged);
-            }
-            else if (character.Name == "Sahad")
-            {
-                chkSahadHp.Tag = nudSahadMaxHp;
-
-                nudSahadLvl.DataBindings.Add("Value", character, "Level");
-                nudSahadMaxHp.DataBindings.Add("Value", character, "MaxHp", false, DataSourceUpdateMode.OnPropertyChanged);
-
-                cmbSahadWeaponEq.DataBindings.Add("SelectedItem", character, "Weapon", false, DataSourceUpdateMode.OnPropertyChanged);
-                cmbSahadBodyEq.DataBindings.Add("SelectedItem", character, "Body", false, DataSourceUpdateMode.OnPropertyChanged);
-                cmbSahadArmEq.DataBindings.Add("SelectedItem", character, "Arm", false, DataSourceUpdateMode.OnPropertyChanged);
-                cmbSahadAccessory1Eq.DataBindings.Add("SelectedItem", character, "Accessory1", false, DataSourceUpdateMode.OnPropertyChanged);
-                cmbSahadAccessory2Eq.DataBindings.Add("SelectedItem", character, "Accessory2", false, DataSourceUpdateMode.OnPropertyChanged);
-            }
-            else if (character.Name == "Hummel")
-            {
-                chkHummHp.Tag = nudHummMaxHp;
-
-                nudHummLvl.DataBindings.Add("Value", character, "Level");
-                nudHummMaxHp.DataBindings.Add("Value", character, "MaxHp", false, DataSourceUpdateMode.OnPropertyChanged);
-
-                cmbHummWeaponEq.DataBindings.Add("SelectedItem", character, "Weapon", false, DataSourceUpdateMode.OnPropertyChanged);
-                cmbHummBodyEq.DataBindings.Add("SelectedItem", character, "Body", false, DataSourceUpdateMode.OnPropertyChanged);
-                cmbHummArmEq.DataBindings.Add("SelectedItem", character, "Arm", false, DataSourceUpdateMode.OnPropertyChanged);
-                cmbHummAccessory1Eq.DataBindings.Add("SelectedItem", character, "Accessory1", false, DataSourceUpdateMode.OnPropertyChanged);
-                cmbHummAccessory2Eq.DataBindings.Add("SelectedItem", character, "Accessory2", false, DataSourceUpdateMode.OnPropertyChanged);
-            }
-            else if (character.Name == "Laxia")
-            {
-                chkLaxiaHp.Tag = nudLaxiaMaxHp;
-                
-                nudLaxiaLvl.DataBindings.Add("Value", character, "Level");
-                nudLaxiaMaxHp.DataBindings.Add("Value", character, "MaxHp", false, DataSourceUpdateMode.OnPropertyChanged);
-
-                cmbLaxiaWeaponEq.DataBindings.Add("SelectedItem", character, "Weapon", false, DataSourceUpdateMode.OnPropertyChanged);
-                cmbLaxiaBodyEq.DataBindings.Add("SelectedItem", character, "Body", false, DataSourceUpdateMode.OnPropertyChanged);
-                cmbLaxiaArmEq.DataBindings.Add("SelectedItem", character, "Arm", false, DataSourceUpdateMode.OnPropertyChanged);
-                cmbLaxiaAccessory1Eq.DataBindings.Add("SelectedItem", character, "Accessory1", false, DataSourceUpdateMode.OnPropertyChanged);
-                cmbLaxiaAccessory2Eq.DataBindings.Add("SelectedItem", character, "Accessory2", false, DataSourceUpdateMode.OnPropertyChanged);
-            }
-            else if (character.Name == "Ricotta")
-            {
-                chkRicoHp.Tag = nudRicoMaxHp;
-
-                nudRicoLvl.DataBindings.Add("Value", character, "Level");
-                nudRicoMaxHp.DataBindings.Add("Value", character, "MaxHp", false, DataSourceUpdateMode.OnPropertyChanged);
-
-                cmbRicoWeaponEq.DataBindings.Add("SelectedItem", character, "Weapon", false, DataSourceUpdateMode.OnPropertyChanged);
-                cmbRicoBodyEq.DataBindings.Add("SelectedItem", character, "Body", false, DataSourceUpdateMode.OnPropertyChanged);
-                cmbRicoArmEq.DataBindings.Add("SelectedItem", character, "Arm", false, DataSourceUpdateMode.OnPropertyChanged);
-                cmbRicoAccessory1Eq.DataBindings.Add("SelectedItem", character, "Accessory1", false, DataSourceUpdateMode.OnPropertyChanged);
-                cmbRicoAccessory2Eq.DataBindings.Add("SelectedItem", character, "Accessory2", false, DataSourceUpdateMode.OnPropertyChanged);
-            }
-            else if (character.Name == "Dana")
-            {
-                chkDanaHp.Tag = nudDanaMaxHp;
-
-                nudDanaLvl.DataBindings.Add("Value", character, "Level");
-                nudDanaMaxHp.DataBindings.Add("Value", character, "MaxHp", false, DataSourceUpdateMode.OnPropertyChanged);
-
-                cmbDanaWeaponEq.DataBindings.Add("SelectedItem", character, "Weapon", false, DataSourceUpdateMode.OnPropertyChanged);
-                cmbDanaBodyEq.DataBindings.Add("SelectedItem", character, "Body", false, DataSourceUpdateMode.OnPropertyChanged);
-                cmbDanaArmEq.DataBindings.Add("SelectedItem", character, "Arm", false, DataSourceUpdateMode.OnPropertyChanged);
-                cmbDanaAccessory1Eq.DataBindings.Add("SelectedItem", character, "Accessory1", false, DataSourceUpdateMode.OnPropertyChanged);
-                cmbDanaAccessory2Eq.DataBindings.Add("SelectedItem", character, "Accessory2", false, DataSourceUpdateMode.OnPropertyChanged);
-            }
-        }
-        private void SetCharacterMaxHp(NumericUpDown nudObject, bool setMaxHp)
-        {
-            if (nudObject == null)
-                return;
-
-            if (setMaxHp)
-            {
-                nudObject.Value = (decimal)Ys8Character.MaxHpValue;
-                nudObject.Validate();
-            }
-            nudObject.ReadOnly = setMaxHp;
-            nudObject.Increment = Convert.ToDecimal(!setMaxHp);
-        }
+        // Save Methods
         private void BackupSave()
         {
             string backupPath = "backups";
@@ -626,7 +642,6 @@ namespace Save_Editor
                 return null;
             }
         }
-
         public void SetSave(Ys8Save save)
         {
             ClearCharacterDataBindings();
@@ -833,7 +848,51 @@ namespace Save_Editor
             }
         }
 
-        #endregion
+        private void lstCharacterSkills_SelectedValueChanged(object sender, EventArgs e)
+        {
+            ListBox lstObject = sender as ListBox;
+            if (lstObject != null)
+            {
+                Ys8Character character = (Ys8Character)lstObject.Tag;
+                NumericUpDown nudSkillRank = null;
+                MaterialCheckBox chkSkillUnlocked = null;
+                int selectedIndex = lstObject.SelectedIndex;
 
+                if (selectedIndex > -1)
+                {
+                    switch (character.Character)
+                    {
+                        case Ys8CharacterEnum.Adol:
+                            nudSkillRank = nudAdolSkillRank;
+                            chkSkillUnlocked = chkAdolSkillUnlocked;
+                            break;
+                        case Ys8CharacterEnum.Sahad:
+                            nudSkillRank = nudSahadSkillRank;
+                            chkSkillUnlocked = chkSahadSkillUnlocked;
+                            break;
+                        case Ys8CharacterEnum.Hummel:
+                            nudSkillRank = nudHummSkillRank;
+                            chkSkillUnlocked = chkHummSkillUnlocked;
+                            break;
+                        case Ys8CharacterEnum.Laxia:
+                            nudSkillRank = nudLaxiaSkillRank;
+                            chkSkillUnlocked = chkLaxiaSkillUnlocked;
+                            break;
+                        case Ys8CharacterEnum.Ricotta:
+                            nudSkillRank = nudRicoSkillRank;
+                            chkSkillUnlocked = chkRicoSkillUnlocked;
+                            break;
+                        case Ys8CharacterEnum.Dana:
+                            nudSkillRank = nudDanaSkillRank;
+                            chkSkillUnlocked = chkDanaSkillUnlocked;
+                            break;
+                    }
+
+                    nudSkillRank.BindingContext[character.Skills].Position = selectedIndex;
+                    chkSkillUnlocked.BindingContext[character.Skills].Position = selectedIndex;
+                }                
+            }
+        }
+        #endregion
     }
 }

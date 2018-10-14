@@ -81,16 +81,6 @@ namespace Save_Editor.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap hummel_trabaldo {
-            get {
-                object obj = ResourceManager.GetObject("hummel_trabaldo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
         ///&lt;Ys8Data xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
         ///  &lt;Ys8Items&gt;
@@ -108,9 +98,19 @@ namespace Save_Editor.Properties {
         ///      &lt;EffectDescription&gt;STR+9&lt;/EffectDescription&gt;
         ///      &lt;Description&gt;A on [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string Items {
+        internal static string Database {
             get {
-                return ResourceManager.GetString("Items", resourceCulture);
+                return ResourceManager.GetString("Database", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hummel_trabaldo {
+            get {
+                object obj = ResourceManager.GetObject("hummel_trabaldo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

@@ -28,7 +28,7 @@ namespace Save_Editor
 
         private void bgwLoad_DoWork(object sender, DoWorkEventArgs e)
         {
-            m_parent.Data = Ys8Data.DeserializeFromString(Properties.Resources.Items);
+            m_parent.Data = Ys8Data.DeserializeFromString(Properties.Resources.Database);
             System.Threading.Thread.Sleep(2000);
         }
 
