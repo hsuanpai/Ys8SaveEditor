@@ -51,11 +51,13 @@
             // 
             // trvItem
             // 
+            this.trvItem.CheckBoxes = true;
             this.trvItem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.trvItem.Location = new System.Drawing.Point(0, 0);
             this.trvItem.Name = "trvItem";
             this.trvItem.Size = new System.Drawing.Size(240, 493);
             this.trvItem.TabIndex = 0;
+            this.trvItem.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.trvItem_AfterCheck);
             this.trvItem.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.trvItem_NodeMouseDoubleClick);
             // 
             // splitContainer1
@@ -260,11 +262,10 @@
             this.btnAdd.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Primary = true;
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.Size = new System.Drawing.Size(86, 23);
             this.btnAdd.TabIndex = 5;
-            this.btnAdd.Text = "Add Item";
+            this.btnAdd.Text = "Add Item(s)";
             this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // frmAddItem
             // 

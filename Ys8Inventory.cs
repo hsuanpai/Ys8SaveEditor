@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace Save_Editor
 {
+    public enum Ys8InventoryType
+    {
+        Current,
+        Previous
+    }
     public class Ys8Inventory : ISaveOffset
     {
         #region Fields
@@ -30,6 +35,10 @@ namespace Save_Editor
             get;
             private set;
         } = new Dictionary<int, int>();
+        public Ys8InventoryType InventoryType
+        {
+            get; set;
+        }
         #endregion
 
         #region Constructors/Destructors

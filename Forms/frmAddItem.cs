@@ -20,11 +20,6 @@ namespace Save_Editor
         #endregion
 
         #region Properties
-        public Ys8SaveItem AddedItem
-        {
-            get;
-            private set;
-        }
         #endregion
 
         #region Constructors/Destructors
@@ -85,6 +80,39 @@ namespace Save_Editor
                 trvItem.Nodes.Add(parentNode);
             }
         }
+        private void GetSaveItems(TreeNodeCollection parentNode, List<Ys8SaveItem> saveItems)
+        {
+            foreach (TreeNode childNode in parentNode)
+            {
+                if (childNode.Checked)
+                    saveItems.Add(new Ys8SaveItem((Ys8Item)childNode.Tag));
+                if (childNode.Nodes.Count > 0)
+                    GetSaveItems(childNode.Nodes, saveItems);
+            }
+        }
+        private void CheckAllNodes(TreeNode node, bool isChecked)
+        {
+            foreach (TreeNode childNode in node.Nodes)
+            {
+                childNode.Checked = isChecked;
+                if (childNode.Nodes.Count > 0)
+                    CheckAllNodes(childNode, isChecked);
+            }
+        }
+        #endregion
+
+        #region Methods
+        public List<Ys8SaveItem> GetAddedItems()
+        {
+            List<Ys8SaveItem> saveItems = new List<Ys8SaveItem>();
+
+            foreach (TreeNode node in trvItem.Nodes)
+            {
+                GetSaveItems(node.Nodes, saveItems);
+            }
+
+            return saveItems;
+        }
         #endregion
 
         #region Control Methods
@@ -92,18 +120,6 @@ namespace Save_Editor
         {
             ClearLabels();
             FillItemTree();
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            if (trvItem.SelectedNode != null)
-            {
-                if (trvItem.SelectedNode.Parent != null)
-                {
-                    Ys8Item selectedItem = (Ys8Item)trvItem.SelectedNode.Tag;
-                    AddedItem = new Ys8SaveItem(selectedItem);
-                }
-            }
         }
 
         private void trvItem_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
@@ -122,5 +138,14 @@ namespace Save_Editor
             }
         }
         #endregion
+
+        private void trvItem_AfterCheck(object sender, TreeViewEventArgs e)
+        {
+            if (e.Action != TreeViewAction.Unknown)
+            {
+                if (e.Node.Nodes.Count > 0)
+                    CheckAllNodes(e.Node, e.Node.Checked);
+            }
+        }
     }
 }

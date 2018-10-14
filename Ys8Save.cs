@@ -210,12 +210,14 @@ namespace Save_Editor
         {
             CurrentInventory = new Ys8Inventory(m_database)
             {
-                Offsets = m_currentInventoryOffsets
+                Offsets = m_currentInventoryOffsets,
+                InventoryType = Ys8InventoryType.Current
             };
 
             PreviousInventory = new Ys8Inventory(m_database)
             {
-                Offsets = m_previousInventoryOffsets
+                Offsets = m_previousInventoryOffsets,
+                InventoryType = Ys8InventoryType.Previous
             };
         }
         private void InitializeCharacters()

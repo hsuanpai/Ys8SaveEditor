@@ -44,6 +44,9 @@
             this.tabCurrentInventory = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.trvCurrentInventory = new System.Windows.Forms.TreeView();
+            this.cmsPreviousItems = new MaterialSkin.Controls.MaterialContextMenuStrip();
+            this.mnuiPrevAddItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.lblCurrentItemRank = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
             this.nudCurrentItemCount = new System.Windows.Forms.NumericUpDown();
@@ -61,9 +64,6 @@
             this.tabPreviousInventory = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.trvPreviousInventory = new System.Windows.Forms.TreeView();
-            this.cmsPreviousItems = new MaterialSkin.Controls.MaterialContextMenuStrip();
-            this.mnuiPrevAddItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.lblPrevItemRank = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel33 = new MaterialSkin.Controls.MaterialLabel();
             this.nudPrevItemCount = new System.Windows.Forms.NumericUpDown();
@@ -132,6 +132,10 @@
             this.cmbLaxiaWeaponEq = new System.Windows.Forms.ComboBox();
             this.materialLabel17 = new MaterialSkin.Controls.MaterialLabel();
             this.tabLaxiaSkills = new System.Windows.Forms.TabPage();
+            this.chkLaxiaSkillUnlocked = new MaterialSkin.Controls.MaterialCheckBox();
+            this.nudLaxiaSkillRank = new System.Windows.Forms.NumericUpDown();
+            this.materialLabel69 = new MaterialSkin.Controls.MaterialLabel();
+            this.lstLaxiaSkills = new System.Windows.Forms.ListBox();
             this.picLaxia = new System.Windows.Forms.PictureBox();
             this.tabSahad = new System.Windows.Forms.TabPage();
             this.materialTabSelector5 = new MaterialSkin.Controls.MaterialTabSelector();
@@ -156,6 +160,10 @@
             this.cmbSahadWeaponEq = new System.Windows.Forms.ComboBox();
             this.materialLabel25 = new MaterialSkin.Controls.MaterialLabel();
             this.tabSahadSkills = new System.Windows.Forms.TabPage();
+            this.chkSahadSkillUnlocked = new MaterialSkin.Controls.MaterialCheckBox();
+            this.nudSahadSkillRank = new System.Windows.Forms.NumericUpDown();
+            this.materialLabel70 = new MaterialSkin.Controls.MaterialLabel();
+            this.lstSahadSkills = new System.Windows.Forms.ListBox();
             this.picSahad = new System.Windows.Forms.PictureBox();
             this.tabHummel = new System.Windows.Forms.TabPage();
             this.materialTabSelector6 = new MaterialSkin.Controls.MaterialTabSelector();
@@ -180,6 +188,10 @@
             this.cmbHummWeaponEq = new System.Windows.Forms.ComboBox();
             this.materialLabel41 = new MaterialSkin.Controls.MaterialLabel();
             this.tabHummSkills = new System.Windows.Forms.TabPage();
+            this.chkHummSkillUnlocked = new MaterialSkin.Controls.MaterialCheckBox();
+            this.nudHummSkillRank = new System.Windows.Forms.NumericUpDown();
+            this.materialLabel71 = new MaterialSkin.Controls.MaterialLabel();
+            this.lstHummSkills = new System.Windows.Forms.ListBox();
             this.picHummel = new System.Windows.Forms.PictureBox();
             this.tabRicotta = new System.Windows.Forms.TabPage();
             this.materialTabSelector7 = new MaterialSkin.Controls.MaterialTabSelector();
@@ -204,6 +216,10 @@
             this.cmbRicoWeaponEq = new System.Windows.Forms.ComboBox();
             this.materialLabel51 = new MaterialSkin.Controls.MaterialLabel();
             this.tabRicoSkills = new System.Windows.Forms.TabPage();
+            this.chkRicoSkillUnlocked = new MaterialSkin.Controls.MaterialCheckBox();
+            this.nudRicoSkillRank = new System.Windows.Forms.NumericUpDown();
+            this.materialLabel72 = new MaterialSkin.Controls.MaterialLabel();
+            this.lstRicoSkills = new System.Windows.Forms.ListBox();
             this.picRicotta = new System.Windows.Forms.PictureBox();
             this.tabDana = new System.Windows.Forms.TabPage();
             this.materialTabSelector8 = new MaterialSkin.Controls.MaterialTabSelector();
@@ -228,6 +244,10 @@
             this.cmbDanaWeaponEq = new System.Windows.Forms.ComboBox();
             this.materialLabel59 = new MaterialSkin.Controls.MaterialLabel();
             this.tabDanaSkills = new System.Windows.Forms.TabPage();
+            this.chkDanaSkillUnlocked = new MaterialSkin.Controls.MaterialCheckBox();
+            this.nudDanaSkillRank = new System.Windows.Forms.NumericUpDown();
+            this.materialLabel73 = new MaterialSkin.Controls.MaterialLabel();
+            this.lstDanaSkills = new System.Windows.Forms.ListBox();
             this.picDana = new System.Windows.Forms.PictureBox();
             this.tabCheats = new System.Windows.Forms.TabPage();
             this.materialLabel61 = new MaterialSkin.Controls.MaterialLabel();
@@ -242,26 +262,6 @@
             this.tipEquippedItem = new System.Windows.Forms.ToolTip(this.components);
             this.ys8CharacterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ys8CharacterBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.chkLaxiaSkillUnlocked = new MaterialSkin.Controls.MaterialCheckBox();
-            this.nudLaxiaSkillRank = new System.Windows.Forms.NumericUpDown();
-            this.materialLabel69 = new MaterialSkin.Controls.MaterialLabel();
-            this.lstLaxiaSkills = new System.Windows.Forms.ListBox();
-            this.chkSahadSkillUnlocked = new MaterialSkin.Controls.MaterialCheckBox();
-            this.nudSahadSkillRank = new System.Windows.Forms.NumericUpDown();
-            this.materialLabel70 = new MaterialSkin.Controls.MaterialLabel();
-            this.lstSahadSkills = new System.Windows.Forms.ListBox();
-            this.chkHummSkillUnlocked = new MaterialSkin.Controls.MaterialCheckBox();
-            this.nudHummSkillRank = new System.Windows.Forms.NumericUpDown();
-            this.materialLabel71 = new MaterialSkin.Controls.MaterialLabel();
-            this.lstHummSkills = new System.Windows.Forms.ListBox();
-            this.chkRicoSkillUnlocked = new MaterialSkin.Controls.MaterialCheckBox();
-            this.nudRicoSkillRank = new System.Windows.Forms.NumericUpDown();
-            this.materialLabel72 = new MaterialSkin.Controls.MaterialLabel();
-            this.lstRicoSkills = new System.Windows.Forms.ListBox();
-            this.chkDanaSkillUnlocked = new MaterialSkin.Controls.MaterialCheckBox();
-            this.nudDanaSkillRank = new System.Windows.Forms.NumericUpDown();
-            this.materialLabel73 = new MaterialSkin.Controls.MaterialLabel();
-            this.lstDanaSkills = new System.Windows.Forms.ListBox();
             this.cmsCurrentItems.SuspendLayout();
             this.tabMainContainer.SuspendLayout();
             this.tabFile.SuspendLayout();
@@ -272,13 +272,13 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.cmsPreviousItems.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCurrentItemCount)).BeginInit();
             this.tabPreviousInventory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            this.cmsPreviousItems.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrevItemCount)).BeginInit();
             this.tabCharacter.SuspendLayout();
             this.tabCharacterContainer.SuspendLayout();
@@ -298,6 +298,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudLaxiaLvl)).BeginInit();
             this.tabLaxiaEquipped.SuspendLayout();
             this.tabLaxiaSkills.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudLaxiaSkillRank)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLaxia)).BeginInit();
             this.tabSahad.SuspendLayout();
             this.tabSahadInfoContainer.SuspendLayout();
@@ -306,6 +307,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudSahadLvl)).BeginInit();
             this.tabSahadEquipped.SuspendLayout();
             this.tabSahadSkills.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSahadSkillRank)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSahad)).BeginInit();
             this.tabHummel.SuspendLayout();
             this.tabHummInfoContainer.SuspendLayout();
@@ -314,6 +316,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudHummLvl)).BeginInit();
             this.tabHummEquipped.SuspendLayout();
             this.tabHummSkills.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHummSkillRank)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHummel)).BeginInit();
             this.tabRicotta.SuspendLayout();
             this.tabRicoInfoContainer.SuspendLayout();
@@ -322,6 +325,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudRicoLvl)).BeginInit();
             this.tabRicoEquppied.SuspendLayout();
             this.tabRicoSkills.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudRicoSkillRank)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRicotta)).BeginInit();
             this.tabDana.SuspendLayout();
             this.tabDanaInfoContainer.SuspendLayout();
@@ -330,15 +334,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudDanaLvl)).BeginInit();
             this.tabDanaEquipped.SuspendLayout();
             this.tabDanaSkills.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDanaSkillRank)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDana)).BeginInit();
             this.tabCheats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ys8CharacterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ys8CharacterBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudLaxiaSkillRank)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSahadSkillRank)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudHummSkillRank)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudRicoSkillRank)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDanaSkillRank)).BeginInit();
             this.SuspendLayout();
             // 
             // cmsCurrentItems
@@ -358,7 +358,7 @@
             this.mnuiCurrAddItem.Name = "mnuiCurrAddItem";
             this.mnuiCurrAddItem.Size = new System.Drawing.Size(144, 22);
             this.mnuiCurrAddItem.Text = "Add Item";
-            this.mnuiCurrAddItem.Click += new System.EventHandler(this.mnuiCurrAddItem_Click);
+            this.mnuiCurrAddItem.Click += new System.EventHandler(this.mnuiInventoryAddItem_Click);
             // 
             // removeItemToolStripMenuItem
             // 
@@ -531,15 +531,41 @@
             // 
             // trvCurrentInventory
             // 
-            this.trvCurrentInventory.ContextMenuStrip = this.cmsCurrentItems;
+            this.trvCurrentInventory.ContextMenuStrip = this.cmsPreviousItems;
             this.trvCurrentInventory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.trvCurrentInventory.Location = new System.Drawing.Point(0, 0);
             this.trvCurrentInventory.Name = "trvCurrentInventory";
             this.trvCurrentInventory.Size = new System.Drawing.Size(200, 367);
             this.trvCurrentInventory.TabIndex = 0;
-            this.trvCurrentInventory.Tag = "current";
+            this.trvCurrentInventory.Tag = "";
             this.trvCurrentInventory.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.trvObjectInventory_NodeMouseClick);
             this.trvCurrentInventory.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.TreeViewObject_NodeMouseDoubleClick);
+            // 
+            // cmsPreviousItems
+            // 
+            this.cmsPreviousItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cmsPreviousItems.Depth = 0;
+            this.cmsPreviousItems.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuiPrevAddItem,
+            this.toolStripMenuItem2});
+            this.cmsPreviousItems.MouseState = MaterialSkin.MouseState.HOVER;
+            this.cmsPreviousItems.Name = "cmsSaveItems";
+            this.cmsPreviousItems.Size = new System.Drawing.Size(145, 48);
+            this.cmsPreviousItems.Tag = "previous";
+            // 
+            // mnuiPrevAddItem
+            // 
+            this.mnuiPrevAddItem.Name = "mnuiPrevAddItem";
+            this.mnuiPrevAddItem.Size = new System.Drawing.Size(144, 22);
+            this.mnuiPrevAddItem.Text = "Add Item";
+            this.mnuiPrevAddItem.Click += new System.EventHandler(this.mnuiInventoryAddItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(144, 22);
+            this.toolStripMenuItem2.Text = "Remove Item";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 
             // lblCurrentItemRank
             // 
@@ -786,32 +812,6 @@
             this.trvPreviousInventory.Tag = "previous";
             this.trvPreviousInventory.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.trvObjectInventory_NodeMouseClick);
             this.trvPreviousInventory.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.TreeViewObject_NodeMouseDoubleClick);
-            // 
-            // cmsPreviousItems
-            // 
-            this.cmsPreviousItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cmsPreviousItems.Depth = 0;
-            this.cmsPreviousItems.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuiPrevAddItem,
-            this.toolStripMenuItem2});
-            this.cmsPreviousItems.MouseState = MaterialSkin.MouseState.HOVER;
-            this.cmsPreviousItems.Name = "cmsSaveItems";
-            this.cmsPreviousItems.Size = new System.Drawing.Size(145, 48);
-            this.cmsPreviousItems.Tag = "previous";
-            // 
-            // mnuiPrevAddItem
-            // 
-            this.mnuiPrevAddItem.Name = "mnuiPrevAddItem";
-            this.mnuiPrevAddItem.Size = new System.Drawing.Size(144, 22);
-            this.mnuiPrevAddItem.Text = "Add Item";
-            this.mnuiPrevAddItem.Click += new System.EventHandler(this.mnuiPrevAddItem_Click);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(144, 22);
-            this.toolStripMenuItem2.Text = "Remove Item";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 
             // lblPrevItemRank
             // 
@@ -1790,6 +1790,70 @@
             this.tabLaxiaSkills.Text = "Skills";
             this.tabLaxiaSkills.UseVisualStyleBackColor = true;
             // 
+            // chkLaxiaSkillUnlocked
+            // 
+            this.chkLaxiaSkillUnlocked.AutoSize = true;
+            this.chkLaxiaSkillUnlocked.Depth = 0;
+            this.chkLaxiaSkillUnlocked.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.chkLaxiaSkillUnlocked.Location = new System.Drawing.Point(154, 29);
+            this.chkLaxiaSkillUnlocked.Margin = new System.Windows.Forms.Padding(0);
+            this.chkLaxiaSkillUnlocked.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.chkLaxiaSkillUnlocked.MouseState = MaterialSkin.MouseState.HOVER;
+            this.chkLaxiaSkillUnlocked.Name = "chkLaxiaSkillUnlocked";
+            this.chkLaxiaSkillUnlocked.Ripple = true;
+            this.chkLaxiaSkillUnlocked.Size = new System.Drawing.Size(87, 30);
+            this.chkLaxiaSkillUnlocked.TabIndex = 7;
+            this.chkLaxiaSkillUnlocked.Text = "Unlocked";
+            this.chkLaxiaSkillUnlocked.UseVisualStyleBackColor = true;
+            // 
+            // nudLaxiaSkillRank
+            // 
+            this.nudLaxiaSkillRank.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudLaxiaSkillRank.Location = new System.Drawing.Point(201, 6);
+            this.nudLaxiaSkillRank.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.nudLaxiaSkillRank.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudLaxiaSkillRank.Name = "nudLaxiaSkillRank";
+            this.nudLaxiaSkillRank.Size = new System.Drawing.Size(188, 20);
+            this.nudLaxiaSkillRank.TabIndex = 6;
+            this.nudLaxiaSkillRank.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // materialLabel69
+            // 
+            this.materialLabel69.AutoSize = true;
+            this.materialLabel69.Depth = 0;
+            this.materialLabel69.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel69.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel69.Location = new System.Drawing.Point(151, 4);
+            this.materialLabel69.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel69.Name = "materialLabel69";
+            this.materialLabel69.Size = new System.Drawing.Size(43, 18);
+            this.materialLabel69.TabIndex = 5;
+            this.materialLabel69.Text = "Rank";
+            // 
+            // lstLaxiaSkills
+            // 
+            this.lstLaxiaSkills.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lstLaxiaSkills.FormattingEnabled = true;
+            this.lstLaxiaSkills.Location = new System.Drawing.Point(3, 3);
+            this.lstLaxiaSkills.Name = "lstLaxiaSkills";
+            this.lstLaxiaSkills.Size = new System.Drawing.Size(142, 303);
+            this.lstLaxiaSkills.TabIndex = 4;
+            this.lstLaxiaSkills.SelectedValueChanged += new System.EventHandler(this.lstCharacterSkills_SelectedValueChanged);
+            // 
             // picLaxia
             // 
             this.picLaxia.Image = global::Save_Editor.Properties.Resources.laxia_von_roswell;
@@ -2119,6 +2183,70 @@
             this.tabSahadSkills.Text = "Skills";
             this.tabSahadSkills.UseVisualStyleBackColor = true;
             // 
+            // chkSahadSkillUnlocked
+            // 
+            this.chkSahadSkillUnlocked.AutoSize = true;
+            this.chkSahadSkillUnlocked.Depth = 0;
+            this.chkSahadSkillUnlocked.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.chkSahadSkillUnlocked.Location = new System.Drawing.Point(154, 29);
+            this.chkSahadSkillUnlocked.Margin = new System.Windows.Forms.Padding(0);
+            this.chkSahadSkillUnlocked.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.chkSahadSkillUnlocked.MouseState = MaterialSkin.MouseState.HOVER;
+            this.chkSahadSkillUnlocked.Name = "chkSahadSkillUnlocked";
+            this.chkSahadSkillUnlocked.Ripple = true;
+            this.chkSahadSkillUnlocked.Size = new System.Drawing.Size(87, 30);
+            this.chkSahadSkillUnlocked.TabIndex = 7;
+            this.chkSahadSkillUnlocked.Text = "Unlocked";
+            this.chkSahadSkillUnlocked.UseVisualStyleBackColor = true;
+            // 
+            // nudSahadSkillRank
+            // 
+            this.nudSahadSkillRank.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudSahadSkillRank.Location = new System.Drawing.Point(201, 6);
+            this.nudSahadSkillRank.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.nudSahadSkillRank.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudSahadSkillRank.Name = "nudSahadSkillRank";
+            this.nudSahadSkillRank.Size = new System.Drawing.Size(188, 20);
+            this.nudSahadSkillRank.TabIndex = 6;
+            this.nudSahadSkillRank.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // materialLabel70
+            // 
+            this.materialLabel70.AutoSize = true;
+            this.materialLabel70.Depth = 0;
+            this.materialLabel70.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel70.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel70.Location = new System.Drawing.Point(151, 4);
+            this.materialLabel70.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel70.Name = "materialLabel70";
+            this.materialLabel70.Size = new System.Drawing.Size(43, 18);
+            this.materialLabel70.TabIndex = 5;
+            this.materialLabel70.Text = "Rank";
+            // 
+            // lstSahadSkills
+            // 
+            this.lstSahadSkills.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lstSahadSkills.FormattingEnabled = true;
+            this.lstSahadSkills.Location = new System.Drawing.Point(3, 3);
+            this.lstSahadSkills.Name = "lstSahadSkills";
+            this.lstSahadSkills.Size = new System.Drawing.Size(142, 303);
+            this.lstSahadSkills.TabIndex = 4;
+            this.lstSahadSkills.SelectedValueChanged += new System.EventHandler(this.lstCharacterSkills_SelectedValueChanged);
+            // 
             // picSahad
             // 
             this.picSahad.Image = global::Save_Editor.Properties.Resources.sahad_noutilus;
@@ -2447,6 +2575,70 @@
             this.tabHummSkills.Text = "Skills";
             this.tabHummSkills.UseVisualStyleBackColor = true;
             // 
+            // chkHummSkillUnlocked
+            // 
+            this.chkHummSkillUnlocked.AutoSize = true;
+            this.chkHummSkillUnlocked.Depth = 0;
+            this.chkHummSkillUnlocked.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.chkHummSkillUnlocked.Location = new System.Drawing.Point(154, 29);
+            this.chkHummSkillUnlocked.Margin = new System.Windows.Forms.Padding(0);
+            this.chkHummSkillUnlocked.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.chkHummSkillUnlocked.MouseState = MaterialSkin.MouseState.HOVER;
+            this.chkHummSkillUnlocked.Name = "chkHummSkillUnlocked";
+            this.chkHummSkillUnlocked.Ripple = true;
+            this.chkHummSkillUnlocked.Size = new System.Drawing.Size(87, 30);
+            this.chkHummSkillUnlocked.TabIndex = 7;
+            this.chkHummSkillUnlocked.Text = "Unlocked";
+            this.chkHummSkillUnlocked.UseVisualStyleBackColor = true;
+            // 
+            // nudHummSkillRank
+            // 
+            this.nudHummSkillRank.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudHummSkillRank.Location = new System.Drawing.Point(201, 6);
+            this.nudHummSkillRank.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.nudHummSkillRank.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudHummSkillRank.Name = "nudHummSkillRank";
+            this.nudHummSkillRank.Size = new System.Drawing.Size(188, 20);
+            this.nudHummSkillRank.TabIndex = 6;
+            this.nudHummSkillRank.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // materialLabel71
+            // 
+            this.materialLabel71.AutoSize = true;
+            this.materialLabel71.Depth = 0;
+            this.materialLabel71.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel71.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel71.Location = new System.Drawing.Point(151, 4);
+            this.materialLabel71.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel71.Name = "materialLabel71";
+            this.materialLabel71.Size = new System.Drawing.Size(43, 18);
+            this.materialLabel71.TabIndex = 5;
+            this.materialLabel71.Text = "Rank";
+            // 
+            // lstHummSkills
+            // 
+            this.lstHummSkills.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lstHummSkills.FormattingEnabled = true;
+            this.lstHummSkills.Location = new System.Drawing.Point(3, 3);
+            this.lstHummSkills.Name = "lstHummSkills";
+            this.lstHummSkills.Size = new System.Drawing.Size(142, 303);
+            this.lstHummSkills.TabIndex = 4;
+            this.lstHummSkills.SelectedValueChanged += new System.EventHandler(this.lstCharacterSkills_SelectedValueChanged);
+            // 
             // picHummel
             // 
             this.picHummel.Image = global::Save_Editor.Properties.Resources.hummel_trabaldo;
@@ -2770,6 +2962,70 @@
             this.tabRicoSkills.TabIndex = 2;
             this.tabRicoSkills.Text = "Skills";
             this.tabRicoSkills.UseVisualStyleBackColor = true;
+            // 
+            // chkRicoSkillUnlocked
+            // 
+            this.chkRicoSkillUnlocked.AutoSize = true;
+            this.chkRicoSkillUnlocked.Depth = 0;
+            this.chkRicoSkillUnlocked.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.chkRicoSkillUnlocked.Location = new System.Drawing.Point(154, 29);
+            this.chkRicoSkillUnlocked.Margin = new System.Windows.Forms.Padding(0);
+            this.chkRicoSkillUnlocked.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.chkRicoSkillUnlocked.MouseState = MaterialSkin.MouseState.HOVER;
+            this.chkRicoSkillUnlocked.Name = "chkRicoSkillUnlocked";
+            this.chkRicoSkillUnlocked.Ripple = true;
+            this.chkRicoSkillUnlocked.Size = new System.Drawing.Size(87, 30);
+            this.chkRicoSkillUnlocked.TabIndex = 7;
+            this.chkRicoSkillUnlocked.Text = "Unlocked";
+            this.chkRicoSkillUnlocked.UseVisualStyleBackColor = true;
+            // 
+            // nudRicoSkillRank
+            // 
+            this.nudRicoSkillRank.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudRicoSkillRank.Location = new System.Drawing.Point(201, 6);
+            this.nudRicoSkillRank.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.nudRicoSkillRank.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudRicoSkillRank.Name = "nudRicoSkillRank";
+            this.nudRicoSkillRank.Size = new System.Drawing.Size(188, 20);
+            this.nudRicoSkillRank.TabIndex = 6;
+            this.nudRicoSkillRank.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // materialLabel72
+            // 
+            this.materialLabel72.AutoSize = true;
+            this.materialLabel72.Depth = 0;
+            this.materialLabel72.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel72.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel72.Location = new System.Drawing.Point(151, 4);
+            this.materialLabel72.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel72.Name = "materialLabel72";
+            this.materialLabel72.Size = new System.Drawing.Size(43, 18);
+            this.materialLabel72.TabIndex = 5;
+            this.materialLabel72.Text = "Rank";
+            // 
+            // lstRicoSkills
+            // 
+            this.lstRicoSkills.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lstRicoSkills.FormattingEnabled = true;
+            this.lstRicoSkills.Location = new System.Drawing.Point(3, 3);
+            this.lstRicoSkills.Name = "lstRicoSkills";
+            this.lstRicoSkills.Size = new System.Drawing.Size(142, 303);
+            this.lstRicoSkills.TabIndex = 4;
+            this.lstRicoSkills.SelectedValueChanged += new System.EventHandler(this.lstCharacterSkills_SelectedValueChanged);
             // 
             // picRicotta
             // 
@@ -3095,6 +3351,70 @@
             this.tabDanaSkills.Text = "Skills";
             this.tabDanaSkills.UseVisualStyleBackColor = true;
             // 
+            // chkDanaSkillUnlocked
+            // 
+            this.chkDanaSkillUnlocked.AutoSize = true;
+            this.chkDanaSkillUnlocked.Depth = 0;
+            this.chkDanaSkillUnlocked.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.chkDanaSkillUnlocked.Location = new System.Drawing.Point(154, 29);
+            this.chkDanaSkillUnlocked.Margin = new System.Windows.Forms.Padding(0);
+            this.chkDanaSkillUnlocked.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.chkDanaSkillUnlocked.MouseState = MaterialSkin.MouseState.HOVER;
+            this.chkDanaSkillUnlocked.Name = "chkDanaSkillUnlocked";
+            this.chkDanaSkillUnlocked.Ripple = true;
+            this.chkDanaSkillUnlocked.Size = new System.Drawing.Size(87, 30);
+            this.chkDanaSkillUnlocked.TabIndex = 7;
+            this.chkDanaSkillUnlocked.Text = "Unlocked";
+            this.chkDanaSkillUnlocked.UseVisualStyleBackColor = true;
+            // 
+            // nudDanaSkillRank
+            // 
+            this.nudDanaSkillRank.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudDanaSkillRank.Location = new System.Drawing.Point(201, 6);
+            this.nudDanaSkillRank.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.nudDanaSkillRank.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudDanaSkillRank.Name = "nudDanaSkillRank";
+            this.nudDanaSkillRank.Size = new System.Drawing.Size(188, 20);
+            this.nudDanaSkillRank.TabIndex = 6;
+            this.nudDanaSkillRank.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // materialLabel73
+            // 
+            this.materialLabel73.AutoSize = true;
+            this.materialLabel73.Depth = 0;
+            this.materialLabel73.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel73.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel73.Location = new System.Drawing.Point(151, 4);
+            this.materialLabel73.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel73.Name = "materialLabel73";
+            this.materialLabel73.Size = new System.Drawing.Size(43, 18);
+            this.materialLabel73.TabIndex = 5;
+            this.materialLabel73.Text = "Rank";
+            // 
+            // lstDanaSkills
+            // 
+            this.lstDanaSkills.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lstDanaSkills.FormattingEnabled = true;
+            this.lstDanaSkills.Location = new System.Drawing.Point(3, 3);
+            this.lstDanaSkills.Name = "lstDanaSkills";
+            this.lstDanaSkills.Size = new System.Drawing.Size(142, 303);
+            this.lstDanaSkills.TabIndex = 4;
+            this.lstDanaSkills.SelectedValueChanged += new System.EventHandler(this.lstCharacterSkills_SelectedValueChanged);
+            // 
             // picDana
             // 
             this.picDana.Image = global::Save_Editor.Properties.Resources.dana_icarusia;
@@ -3267,326 +3587,6 @@
             // 
             this.ys8CharacterBindingSource1.DataSource = typeof(Save_Editor.Ys8Character);
             // 
-            // chkLaxiaSkillUnlocked
-            // 
-            this.chkLaxiaSkillUnlocked.AutoSize = true;
-            this.chkLaxiaSkillUnlocked.Depth = 0;
-            this.chkLaxiaSkillUnlocked.Font = new System.Drawing.Font("Roboto", 10F);
-            this.chkLaxiaSkillUnlocked.Location = new System.Drawing.Point(154, 29);
-            this.chkLaxiaSkillUnlocked.Margin = new System.Windows.Forms.Padding(0);
-            this.chkLaxiaSkillUnlocked.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.chkLaxiaSkillUnlocked.MouseState = MaterialSkin.MouseState.HOVER;
-            this.chkLaxiaSkillUnlocked.Name = "chkLaxiaSkillUnlocked";
-            this.chkLaxiaSkillUnlocked.Ripple = true;
-            this.chkLaxiaSkillUnlocked.Size = new System.Drawing.Size(87, 30);
-            this.chkLaxiaSkillUnlocked.TabIndex = 7;
-            this.chkLaxiaSkillUnlocked.Text = "Unlocked";
-            this.chkLaxiaSkillUnlocked.UseVisualStyleBackColor = true;
-            // 
-            // nudLaxiaSkillRank
-            // 
-            this.nudLaxiaSkillRank.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudLaxiaSkillRank.Location = new System.Drawing.Point(201, 6);
-            this.nudLaxiaSkillRank.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.nudLaxiaSkillRank.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudLaxiaSkillRank.Name = "nudLaxiaSkillRank";
-            this.nudLaxiaSkillRank.Size = new System.Drawing.Size(188, 20);
-            this.nudLaxiaSkillRank.TabIndex = 6;
-            this.nudLaxiaSkillRank.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // materialLabel69
-            // 
-            this.materialLabel69.AutoSize = true;
-            this.materialLabel69.Depth = 0;
-            this.materialLabel69.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel69.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel69.Location = new System.Drawing.Point(151, 4);
-            this.materialLabel69.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel69.Name = "materialLabel69";
-            this.materialLabel69.Size = new System.Drawing.Size(42, 19);
-            this.materialLabel69.TabIndex = 5;
-            this.materialLabel69.Text = "Rank";
-            // 
-            // lstLaxiaSkills
-            // 
-            this.lstLaxiaSkills.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lstLaxiaSkills.FormattingEnabled = true;
-            this.lstLaxiaSkills.Location = new System.Drawing.Point(3, 3);
-            this.lstLaxiaSkills.Name = "lstLaxiaSkills";
-            this.lstLaxiaSkills.Size = new System.Drawing.Size(142, 303);
-            this.lstLaxiaSkills.TabIndex = 4;
-            this.lstLaxiaSkills.SelectedValueChanged += new System.EventHandler(this.lstCharacterSkills_SelectedValueChanged);
-            // 
-            // chkSahadSkillUnlocked
-            // 
-            this.chkSahadSkillUnlocked.AutoSize = true;
-            this.chkSahadSkillUnlocked.Depth = 0;
-            this.chkSahadSkillUnlocked.Font = new System.Drawing.Font("Roboto", 10F);
-            this.chkSahadSkillUnlocked.Location = new System.Drawing.Point(154, 29);
-            this.chkSahadSkillUnlocked.Margin = new System.Windows.Forms.Padding(0);
-            this.chkSahadSkillUnlocked.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.chkSahadSkillUnlocked.MouseState = MaterialSkin.MouseState.HOVER;
-            this.chkSahadSkillUnlocked.Name = "chkSahadSkillUnlocked";
-            this.chkSahadSkillUnlocked.Ripple = true;
-            this.chkSahadSkillUnlocked.Size = new System.Drawing.Size(87, 30);
-            this.chkSahadSkillUnlocked.TabIndex = 7;
-            this.chkSahadSkillUnlocked.Text = "Unlocked";
-            this.chkSahadSkillUnlocked.UseVisualStyleBackColor = true;
-            // 
-            // nudSahadSkillRank
-            // 
-            this.nudSahadSkillRank.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudSahadSkillRank.Location = new System.Drawing.Point(201, 6);
-            this.nudSahadSkillRank.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.nudSahadSkillRank.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudSahadSkillRank.Name = "nudSahadSkillRank";
-            this.nudSahadSkillRank.Size = new System.Drawing.Size(188, 20);
-            this.nudSahadSkillRank.TabIndex = 6;
-            this.nudSahadSkillRank.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // materialLabel70
-            // 
-            this.materialLabel70.AutoSize = true;
-            this.materialLabel70.Depth = 0;
-            this.materialLabel70.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel70.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel70.Location = new System.Drawing.Point(151, 4);
-            this.materialLabel70.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel70.Name = "materialLabel70";
-            this.materialLabel70.Size = new System.Drawing.Size(42, 19);
-            this.materialLabel70.TabIndex = 5;
-            this.materialLabel70.Text = "Rank";
-            // 
-            // lstSahadSkills
-            // 
-            this.lstSahadSkills.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lstSahadSkills.FormattingEnabled = true;
-            this.lstSahadSkills.Location = new System.Drawing.Point(3, 3);
-            this.lstSahadSkills.Name = "lstSahadSkills";
-            this.lstSahadSkills.Size = new System.Drawing.Size(142, 303);
-            this.lstSahadSkills.TabIndex = 4;
-            this.lstSahadSkills.SelectedValueChanged += new System.EventHandler(this.lstCharacterSkills_SelectedValueChanged);
-            // 
-            // chkHummSkillUnlocked
-            // 
-            this.chkHummSkillUnlocked.AutoSize = true;
-            this.chkHummSkillUnlocked.Depth = 0;
-            this.chkHummSkillUnlocked.Font = new System.Drawing.Font("Roboto", 10F);
-            this.chkHummSkillUnlocked.Location = new System.Drawing.Point(154, 29);
-            this.chkHummSkillUnlocked.Margin = new System.Windows.Forms.Padding(0);
-            this.chkHummSkillUnlocked.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.chkHummSkillUnlocked.MouseState = MaterialSkin.MouseState.HOVER;
-            this.chkHummSkillUnlocked.Name = "chkHummSkillUnlocked";
-            this.chkHummSkillUnlocked.Ripple = true;
-            this.chkHummSkillUnlocked.Size = new System.Drawing.Size(87, 30);
-            this.chkHummSkillUnlocked.TabIndex = 7;
-            this.chkHummSkillUnlocked.Text = "Unlocked";
-            this.chkHummSkillUnlocked.UseVisualStyleBackColor = true;
-            // 
-            // nudHummSkillRank
-            // 
-            this.nudHummSkillRank.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudHummSkillRank.Location = new System.Drawing.Point(201, 6);
-            this.nudHummSkillRank.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.nudHummSkillRank.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudHummSkillRank.Name = "nudHummSkillRank";
-            this.nudHummSkillRank.Size = new System.Drawing.Size(188, 20);
-            this.nudHummSkillRank.TabIndex = 6;
-            this.nudHummSkillRank.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // materialLabel71
-            // 
-            this.materialLabel71.AutoSize = true;
-            this.materialLabel71.Depth = 0;
-            this.materialLabel71.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel71.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel71.Location = new System.Drawing.Point(151, 4);
-            this.materialLabel71.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel71.Name = "materialLabel71";
-            this.materialLabel71.Size = new System.Drawing.Size(42, 19);
-            this.materialLabel71.TabIndex = 5;
-            this.materialLabel71.Text = "Rank";
-            // 
-            // lstHummSkills
-            // 
-            this.lstHummSkills.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lstHummSkills.FormattingEnabled = true;
-            this.lstHummSkills.Location = new System.Drawing.Point(3, 3);
-            this.lstHummSkills.Name = "lstHummSkills";
-            this.lstHummSkills.Size = new System.Drawing.Size(142, 303);
-            this.lstHummSkills.TabIndex = 4;
-            this.lstHummSkills.SelectedValueChanged += new System.EventHandler(this.lstCharacterSkills_SelectedValueChanged);
-            // 
-            // chkRicoSkillUnlocked
-            // 
-            this.chkRicoSkillUnlocked.AutoSize = true;
-            this.chkRicoSkillUnlocked.Depth = 0;
-            this.chkRicoSkillUnlocked.Font = new System.Drawing.Font("Roboto", 10F);
-            this.chkRicoSkillUnlocked.Location = new System.Drawing.Point(154, 29);
-            this.chkRicoSkillUnlocked.Margin = new System.Windows.Forms.Padding(0);
-            this.chkRicoSkillUnlocked.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.chkRicoSkillUnlocked.MouseState = MaterialSkin.MouseState.HOVER;
-            this.chkRicoSkillUnlocked.Name = "chkRicoSkillUnlocked";
-            this.chkRicoSkillUnlocked.Ripple = true;
-            this.chkRicoSkillUnlocked.Size = new System.Drawing.Size(87, 30);
-            this.chkRicoSkillUnlocked.TabIndex = 7;
-            this.chkRicoSkillUnlocked.Text = "Unlocked";
-            this.chkRicoSkillUnlocked.UseVisualStyleBackColor = true;
-            // 
-            // nudRicoSkillRank
-            // 
-            this.nudRicoSkillRank.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudRicoSkillRank.Location = new System.Drawing.Point(201, 6);
-            this.nudRicoSkillRank.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.nudRicoSkillRank.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudRicoSkillRank.Name = "nudRicoSkillRank";
-            this.nudRicoSkillRank.Size = new System.Drawing.Size(188, 20);
-            this.nudRicoSkillRank.TabIndex = 6;
-            this.nudRicoSkillRank.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // materialLabel72
-            // 
-            this.materialLabel72.AutoSize = true;
-            this.materialLabel72.Depth = 0;
-            this.materialLabel72.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel72.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel72.Location = new System.Drawing.Point(151, 4);
-            this.materialLabel72.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel72.Name = "materialLabel72";
-            this.materialLabel72.Size = new System.Drawing.Size(42, 19);
-            this.materialLabel72.TabIndex = 5;
-            this.materialLabel72.Text = "Rank";
-            // 
-            // lstRicoSkills
-            // 
-            this.lstRicoSkills.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lstRicoSkills.FormattingEnabled = true;
-            this.lstRicoSkills.Location = new System.Drawing.Point(3, 3);
-            this.lstRicoSkills.Name = "lstRicoSkills";
-            this.lstRicoSkills.Size = new System.Drawing.Size(142, 303);
-            this.lstRicoSkills.TabIndex = 4;
-            this.lstRicoSkills.SelectedValueChanged += new System.EventHandler(this.lstCharacterSkills_SelectedValueChanged);
-            // 
-            // chkDanaSkillUnlocked
-            // 
-            this.chkDanaSkillUnlocked.AutoSize = true;
-            this.chkDanaSkillUnlocked.Depth = 0;
-            this.chkDanaSkillUnlocked.Font = new System.Drawing.Font("Roboto", 10F);
-            this.chkDanaSkillUnlocked.Location = new System.Drawing.Point(154, 29);
-            this.chkDanaSkillUnlocked.Margin = new System.Windows.Forms.Padding(0);
-            this.chkDanaSkillUnlocked.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.chkDanaSkillUnlocked.MouseState = MaterialSkin.MouseState.HOVER;
-            this.chkDanaSkillUnlocked.Name = "chkDanaSkillUnlocked";
-            this.chkDanaSkillUnlocked.Ripple = true;
-            this.chkDanaSkillUnlocked.Size = new System.Drawing.Size(87, 30);
-            this.chkDanaSkillUnlocked.TabIndex = 7;
-            this.chkDanaSkillUnlocked.Text = "Unlocked";
-            this.chkDanaSkillUnlocked.UseVisualStyleBackColor = true;
-            // 
-            // nudDanaSkillRank
-            // 
-            this.nudDanaSkillRank.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudDanaSkillRank.Location = new System.Drawing.Point(201, 6);
-            this.nudDanaSkillRank.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.nudDanaSkillRank.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudDanaSkillRank.Name = "nudDanaSkillRank";
-            this.nudDanaSkillRank.Size = new System.Drawing.Size(188, 20);
-            this.nudDanaSkillRank.TabIndex = 6;
-            this.nudDanaSkillRank.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // materialLabel73
-            // 
-            this.materialLabel73.AutoSize = true;
-            this.materialLabel73.Depth = 0;
-            this.materialLabel73.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel73.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel73.Location = new System.Drawing.Point(151, 4);
-            this.materialLabel73.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel73.Name = "materialLabel73";
-            this.materialLabel73.Size = new System.Drawing.Size(42, 19);
-            this.materialLabel73.TabIndex = 5;
-            this.materialLabel73.Text = "Rank";
-            // 
-            // lstDanaSkills
-            // 
-            this.lstDanaSkills.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lstDanaSkills.FormattingEnabled = true;
-            this.lstDanaSkills.Location = new System.Drawing.Point(3, 3);
-            this.lstDanaSkills.Name = "lstDanaSkills";
-            this.lstDanaSkills.Size = new System.Drawing.Size(142, 303);
-            this.lstDanaSkills.TabIndex = 4;
-            this.lstDanaSkills.SelectedValueChanged += new System.EventHandler(this.lstCharacterSkills_SelectedValueChanged);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3610,6 +3610,7 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.cmsPreviousItems.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nudCurrentItemCount)).EndInit();
             this.tabPreviousInventory.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
@@ -3617,7 +3618,6 @@
             this.splitContainer2.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            this.cmsPreviousItems.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nudPrevItemCount)).EndInit();
             this.tabCharacter.ResumeLayout(false);
             this.tabCharacterContainer.ResumeLayout(false);
@@ -3643,6 +3643,7 @@
             this.tabLaxiaEquipped.PerformLayout();
             this.tabLaxiaSkills.ResumeLayout(false);
             this.tabLaxiaSkills.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudLaxiaSkillRank)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLaxia)).EndInit();
             this.tabSahad.ResumeLayout(false);
             this.tabSahadInfoContainer.ResumeLayout(false);
@@ -3654,6 +3655,7 @@
             this.tabSahadEquipped.PerformLayout();
             this.tabSahadSkills.ResumeLayout(false);
             this.tabSahadSkills.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSahadSkillRank)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSahad)).EndInit();
             this.tabHummel.ResumeLayout(false);
             this.tabHummInfoContainer.ResumeLayout(false);
@@ -3665,6 +3667,7 @@
             this.tabHummEquipped.PerformLayout();
             this.tabHummSkills.ResumeLayout(false);
             this.tabHummSkills.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHummSkillRank)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHummel)).EndInit();
             this.tabRicotta.ResumeLayout(false);
             this.tabRicoInfoContainer.ResumeLayout(false);
@@ -3676,6 +3679,7 @@
             this.tabRicoEquppied.PerformLayout();
             this.tabRicoSkills.ResumeLayout(false);
             this.tabRicoSkills.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudRicoSkillRank)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRicotta)).EndInit();
             this.tabDana.ResumeLayout(false);
             this.tabDanaInfoContainer.ResumeLayout(false);
@@ -3687,16 +3691,12 @@
             this.tabDanaEquipped.PerformLayout();
             this.tabDanaSkills.ResumeLayout(false);
             this.tabDanaSkills.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDanaSkillRank)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDana)).EndInit();
             this.tabCheats.ResumeLayout(false);
             this.tabCheats.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ys8CharacterBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ys8CharacterBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudLaxiaSkillRank)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSahadSkillRank)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudHummSkillRank)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudRicoSkillRank)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDanaSkillRank)).EndInit();
             this.ResumeLayout(false);
 
         }

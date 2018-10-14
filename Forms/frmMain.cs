@@ -271,8 +271,17 @@ namespace Save_Editor
         // Inventory Methods
         private void SetInventories(Ys8Save save)
         {
-            FillTreeView(save.CurrentInventory, trvCurrentInventory);
-            FillTreeView(save.PreviousInventory, trvPreviousInventory);
+            Ys8Inventory currentInventory = save.CurrentInventory;
+            Ys8Inventory previousInventory = save.PreviousInventory;
+
+            cmsCurrentItems.Tag = trvCurrentInventory;
+            cmsPreviousItems.Tag = trvPreviousInventory;
+
+            trvCurrentInventory.Tag = currentInventory;
+            trvPreviousInventory.Tag = previousInventory;
+
+            FillTreeView(currentInventory, trvCurrentInventory);
+            FillTreeView(previousInventory, trvPreviousInventory);
         }
         private void FillTreeView(Ys8Inventory inventory, TreeView treeViewObject)
         {
@@ -319,15 +328,8 @@ namespace Save_Editor
             }
 #endif
         }
-        private bool AddInventoryItem(Ys8SaveItem item, bool isPreviousInventory)
+        private bool AddInventoryItem(Ys8Inventory inventory, Ys8SaveItem item)
         {
-            Ys8Inventory inventory;
-
-            if (!isPreviousInventory)
-                inventory = m_save.CurrentInventory;
-            else
-                inventory = m_save.PreviousInventory;
-
             if (!inventory.Items.ContainsKey(item.ID))
             {
                 inventory.Items.Add(item.ID, item);
@@ -343,7 +345,7 @@ namespace Save_Editor
 
             TreeNode selectedNode = treeViewObject.Nodes[treeViewObject.Nodes.IndexOfKey(key)];
 
-            if (!selectedNode.Nodes.ContainsKey(item.Parent.Name))
+            if (!selectedNode.Nodes.ContainsKey(item.Name))
             {
                 TreeNode childNode = new TreeNode(item.Parent.Name)
                 {
@@ -392,7 +394,6 @@ namespace Save_Editor
             lblItemDescription.Text = parentItem.Description;
 
             if (Ys8Item.WeaponTypes.Contains(parentItem.Type) || parentItem.Type == Ys8ItemType.DLC)
-            //if (Ys8Item.WeaponTypes.Contains(parentItem.Type) || Ys8Item.EquipmentTypes.Contains(parentItem.Type) || parentItem.Type == Ys8ItemType.DLC)
             {
                 lblItemCount.Visible = false;
                 nudItemCount.Visible = false;
@@ -757,36 +758,33 @@ namespace Save_Editor
 #else
                     saveItem = (Ys8SaveItem)selectedNode.Tag;
 #endif
-                    SetItemValues(saveItem, (string)trvObject.Tag == "previous");
+                    SetItemValues(saveItem, ((Ys8Inventory)trvObject.Tag).InventoryType == Ys8InventoryType.Previous);
                 }
             }
         }
 
-        private void mnuiCurrAddItem_Click(object sender, EventArgs e)
+        private void mnuiInventoryAddItem_Click(object sender, EventArgs e)
         {
             frmAddItem addItem = new frmAddItem(m_database);
             if (addItem.ShowDialog() == DialogResult.OK)
             {
-                if (addItem.AddedItem != null)
-                {
-                    if (AddInventoryItem(addItem.AddedItem, false))
-                    {
-                        AddTreeViewItem(trvCurrentInventory, addItem.AddedItem);
-                    }
-                }
-            }
-        }
+                List<Ys8SaveItem> saveItems = addItem.GetAddedItems();
 
-        private void mnuiPrevAddItem_Click(object sender, EventArgs e)
-        {
-            frmAddItem addItem = new frmAddItem(m_database);
-            if (addItem.ShowDialog() == DialogResult.OK)
-            {
-                if (addItem.AddedItem != null)
+                if (saveItems.Count > 0)
                 {
-                    if (AddInventoryItem(addItem.AddedItem, true))
+                    ToolStripMenuItem mnuiObject = sender as ToolStripMenuItem;
+                    MaterialContextMenuStrip cmsObject = mnuiObject.Owner as MaterialContextMenuStrip;
+
+                    if (mnuiObject != null && cmsObject != null)
                     {
-                        AddTreeViewItem(trvPreviousInventory, addItem.AddedItem);
+                        foreach (Ys8SaveItem saveItem in saveItems)
+                        {
+                            TreeView trvObject = (TreeView)cmsObject.Tag;
+                            Ys8Inventory inventory = (Ys8Inventory)trvObject.Tag;
+
+                            if (AddInventoryItem(inventory, saveItem))
+                                AddTreeViewItem((TreeView)cmsObject.Tag, saveItem);
+                        }
                     }
                 }
             }
