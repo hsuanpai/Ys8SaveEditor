@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Save_Editor")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Ys VIII: Lacrimosa of Dana Save Editor")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Save_Editor")]
