@@ -647,7 +647,7 @@ namespace Save_Editor
             ClearCharacterDataBindings();
             ClearCharacterCheckBoxes();
 
-            SetComboBoxData();
+            //SetComboBoxData();
             SetInventories(save);
             SetCharacters(save);
 

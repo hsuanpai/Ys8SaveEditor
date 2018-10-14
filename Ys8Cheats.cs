@@ -40,7 +40,7 @@ namespace Save_Editor
             {
                 foreach (KeyValuePair<int, Ys8SaveItem> item in inventories[i].Items)
                 {
-                    if (!Ys8Item.WeaponTypes.Contains(item.Value.Type) || !m_restrictedIds.Contains(item.Value.ID))
+                    if (!Ys8Item.WeaponTypes.Contains(item.Value.Type) && !m_restrictedIds.Contains(item.Value.ID))
                     {
                             item.Value.Count = m_maxCount;
                     }
