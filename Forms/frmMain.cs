@@ -681,8 +681,10 @@ namespace Save_Editor
             {
                 try
                 {
-                    BackupSave();
+                    if (MessageBox.Show("Do you want to create a backup?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        BackupSave();
                     m_save.Save(sfdSaveFile.FileName);
+
                 }
                 catch (Exception ex)
                 {
